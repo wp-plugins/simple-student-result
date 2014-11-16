@@ -13,7 +13,9 @@ Just another simple student result plugin. Simple but flexible.
 == Description ==
 
 Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
-
+Usage:
+<p>View result by shortcode [sms_result] (in post editor) or 
+		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
 = Docs & Support =
 
 You can find tutorial with screenshot in http://saadamin.info/portfolio/ssr
@@ -32,21 +34,34 @@ You will find 'Students Results' menu in your WordPress admin panel.
 For basic usage, you can also have a look at the [plugin homepage](http://saadamin.info/portfolio/ssr).
 
 == Screenshots ==
-At first install the plugin
-screenshot-1.jpg
 <ol class="screenshots">
 	<li>
 		<a href="//ps.w.org/simple-student-result/assets/screenshot-1.jpg" title="Click to view full-size screenshot 1" rel="nofollow">	
 		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-1.jpg" alt="simple-student-result screenshot 1">
 		</a>		<p>At first install the plugin</p>
 	</li>
+	<li>
+		<a href="//ps.w.org/simple-student-result/assets/screenshot-2.jpg" title="Click to view full-size screenshot 2" rel="nofollow">	
+		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-2.jpg" alt="simple-student-result screenshot 2">
+		</a>		<p>Add Results</p>
+	</li>
+	<li>
+		<a href="//ps.w.org/simple-student-result/assets/screenshot-3.jpg" title="Click to view full-size screenshot 3" rel="nofollow">	
+		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-3.jpg" alt="simple-student-result screenshot 3">
+		</a>		<p>View result by shortcode [sms_result] (in post editor) or 
+		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
+	</li>
+	<li>
+		<a href="//ps.w.org/simple-student-result/assets/screenshot-4.jpg" title="Click to view full-size screenshot 4" rel="nofollow">	
+		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-4.jpg" alt="simple-student-result screenshot 4">
+		</a>		<p>Plugin menu in dashboard</p>
+	</li>
+	<li>
+		<a href="//ps.w.org/simple-student-result/assets/screenshot-5.jpg" title="Click to view full-size screenshot 5" rel="nofollow">	
+		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-5.jpg" alt="simple-student-result screenshot 5">
+		</a>		<p>Plugin menu in top bar</p>
+	</li>
 </ol>
-2. screenshot2.jpg
-3. view results.jpg
-4. menu.jpg
-5. plugin active.jpg
-6. screenshot.jpg
-7. top menu.jpg
 
 
 == Frequently Asked Questions ==
