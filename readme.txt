@@ -68,8 +68,11 @@ For basic usage, you can also have a look at the [plugin homepage](http://saadam
 
 
 == Frequently Asked Questions ==
-question: can I add new course?
+question: can I add/edit new course?<br>
 ans: Yes , you can, you will find course item wp-admin panel below page.
+
+question: can I add/edit CGPA?<br>
+ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
  This is first version.
