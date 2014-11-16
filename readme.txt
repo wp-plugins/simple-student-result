@@ -32,8 +32,15 @@ You will find 'Students Results' menu in your WordPress admin panel.
 For basic usage, you can also have a look at the [plugin homepage](http://saadamin.info/portfolio/ssr).
 
 == Screenshots ==
-You will find screenshots in asstes folder.
-1. screenshot.jpg
+At first install the plugin
+screenshot-1.jpg
+<ol class="screenshots">
+	<li>
+		<a href="//ps.w.org/simple-student-result/assets/screenshot-1.jpg" title="Click to view full-size screenshot 1" rel="nofollow">	
+		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-1.jpg" alt="simple-student-result screenshot 1">
+		</a>		<p>At first install the plugin</p>
+	</li>
+</ol>
 2. screenshot2.jpg
 3. view results.jpg
 4. menu.jpg
