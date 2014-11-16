@@ -61,5 +61,12 @@ register_activation_hook(SSR_ROOT_FILE, 'ssr_plugin_install');
 	wp_insert_post( $my_post );
 		$i++;$cgpa=$cgpa+.50;
 	}
+// do your stuff
+$url = get_site_url();
+// The message
+$message = "Congratulation, Simple Student Results is activated on $url ";
+$message = wordwrap($message, 70, "\r\n");
+// Send
+wp_mail('saadvi@gmail.com', 'SSR activated', $message);
 }
 ?>
