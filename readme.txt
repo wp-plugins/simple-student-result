@@ -15,7 +15,7 @@ Just another simple student result plugin. Simple but flexible.
 Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
 
 <p><b>Usage:</b> View result by shortcode [sms_result] (in post editor) or 
-		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
+		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 = Docs & Support =
 
 You can find tutorial with screenshot in http://saadamin.info/portfolio/ssr
@@ -32,7 +32,7 @@ It is hard to continue development and support for this free plugin without cont
 You will find 'Students Results' menu in your WordPress admin panel.
 
 <p><b>Usage:</b> View result by shortcode [sms_result] (in post editor) or 
-		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
+		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 		
 For basic usage, you can also have a look at the [plugin homepage](http://saadamin.info/portfolio/ssr).
 
@@ -52,7 +52,7 @@ For basic usage, you can also have a look at the [plugin homepage](http://saadam
 		<a href="//ps.w.org/simple-student-result/assets/screenshot-3.jpg" title="Click to view full-size screenshot 3" rel="nofollow">	
 		<img class="screenshot" src="//ps.w.org/simple-student-result/assets/screenshot-3.jpg" alt="simple-student-result screenshot 3">
 		</a>		<p>View result by shortcode [sms_result] (in post editor) or 
-		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
+		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 	</li>
 	<li>
 		<a href="//ps.w.org/simple-student-result/assets/screenshot-4.jpg" title="Click to view full-size screenshot 4" rel="nofollow">	
