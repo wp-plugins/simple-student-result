@@ -8,7 +8,7 @@ Stable tag: 4.0
 License: licensed under “GPLv2 or later”
 Contributors: Saad Amin
 
-Just another simple student result plugin. Simple but flexible.
+A simple student result plugin. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
 
 == Description ==
 
