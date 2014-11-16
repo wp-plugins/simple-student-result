@@ -13,8 +13,8 @@ Just another simple student result plugin. Simple but flexible.
 == Description ==
 
 Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
-Usage:
-<p>View result by shortcode [sms_result] (in post editor) or 
+
+<p><b>Usage:</b> View result by shortcode [sms_result] (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
 = Docs & Support =
 
@@ -31,6 +31,9 @@ It is hard to continue development and support for this free plugin without cont
 
 You will find 'Students Results' menu in your WordPress admin panel.
 
+<p><b>Usage:</b> View result by shortcode [sms_result] (in post editor) or 
+		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[gallery]' );</p>
+		
 For basic usage, you can also have a look at the [plugin homepage](http://saadamin.info/portfolio/ssr).
 
 == Screenshots ==
