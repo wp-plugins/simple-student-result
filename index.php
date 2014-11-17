@@ -3,7 +3,7 @@
  * Plugin Name: Simple Student Result
  * Plugin URI: http://saadamin.info/portfolio/ssr
  * Description: Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Saad Amin
  * Author URI: http://www.saadamin.info
  * License: GPL2
