@@ -1,7 +1,11 @@
-=== Simple Student Result ===
+﻿=== Simple Student Result ===
+
 Contributor: Saad Amin
-Donate link: http://bit.ly/donatebypaypal
+Donate
+link: http://bit.ly/donatebypaypal
+
 Tags: student, student result, university, education
+
 Requires at least: 3.8
 Tested up to: 4.0
 Stable tag: 4.0
@@ -75,7 +79,8 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
- This is first version.
+ 1.0.1 fixed saveral bugs.
+ 1.0 This is first version.
  
  == Upgrade Notice ==
  will have more features soon.
