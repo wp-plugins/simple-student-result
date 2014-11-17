@@ -56,9 +56,7 @@ global $wpdb;
 		  array( 'rid' => mysql_real_escape_string($_POST['rid']), 'roll' => mysql_real_escape_string($_POST['rn']) , 'stdname' => mysql_real_escape_string($_POST['stn']) , 'fathersname' => mysql_real_escape_string($_POST['stfn']) , 'pyear' => mysql_real_escape_string($_POST['stpy']) , 'cgpa' => mysql_real_escape_string($_POST['stcgpa']), 'subject' => mysql_real_escape_string($_POST['stsub']) , 'image' => mysql_real_escape_string($_POST['upload_image']) )
 		);
     }
-//$student_count =$wpdb->prepare( "SELECT COUNT(*) FROM ".SSR_TABLE);
-$student_count =$wpdb->prepare( "SELECT COUNT(*) FROM $SSR_TABLE" );
-$student_count = $wpdb->get_var($student_count);
+$student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".SSR_TABLE );
 echo $student_count;
 	if ($wpdb->last_error) {
   die('error=' . var_dump($wpdb->last_query) . ',' . var_dump($wpdb->error));
@@ -76,8 +74,7 @@ global $wpdb;
 if ($student_count>0){
 $student_count =$wpdb->prepare( "delete from ".SSR_TABLE." where rid=%d", mysql_real_escape_string($_POST['rid']) );
 $wpdb->query($student_count);
-$student_count = $wpdb->prepare( "SELECT COUNT(*) FROM ".SSR_TABLE);
-$student_count = $wpdb->get_var($student_count);
+$student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".SSR_TABLE );
 echo $student_count;
 }else{echo 'no';}
 	if ($wpdb->last_error) {
