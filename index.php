@@ -24,11 +24,13 @@ define( 'SSR_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 	}
 	include SSR_ROOT_PATH.'/ad_scripts.php';
 	include SSR_ROOT_PATH.'/views/ssr_shortcode.php';
-$arr = json_decode(file_get_contents('http://freegeoip.net/json/'.SSR_get_client_ip()),true);
-if ($arr){
-define( 'SSR_Visitor_Country',  $arr['country_name'] );
-unset($arr);
-}else{define( 'SSR_Visitor_Country',  'unknown');}
+	require_once SSR_ROOT_PATH.'/userip/ip.codehelper.io.php';
+	require_once SSR_ROOT_PATH.'/userip/php_fast_cache.php';
+	$_ip = new ip_codehelper();
+	$real_client_ip_address = $_ip->getRealIP();
+	$visitor_location       = $_ip->getLocation($real_client_ip_address);
+	define( 'SSR_Visitor_Country',  $visitor_location['CountryName'] );
+	define( 'SSR_Visitor_City',  $visitor_location['CityName'] );
 
 
 function SSR_plugin_path( $path = '' ) {
@@ -40,24 +42,5 @@ function SSR_plugin_url( $path = '' ) {
 	if ( ! empty( $path ) && is_string( $path ) && false === strpos( $path, '..' ) )
 		$url .= '/' . ltrim( $path, '/' );
 	return $url;
-}
-// Function to get the client IP address
-function SSR_get_client_ip() {
-    $ipaddress = '';
-    if (getenv('HTTP_CLIENT_IP'))
-        $ipaddress = getenv('HTTP_CLIENT_IP');
-    else if(getenv('HTTP_X_FORWARDED_FOR'))
-        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-    else if(getenv('HTTP_X_FORWARDED'))
-        $ipaddress = getenv('HTTP_X_FORWARDED');
-    else if(getenv('HTTP_FORWARDED_FOR'))
-        $ipaddress = getenv('HTTP_FORWARDED_FOR');
-    else if(getenv('HTTP_FORWARDED'))
-       $ipaddress = getenv('HTTP_FORWARDED');
-    else if(getenv('REMOTE_ADDR'))
-        $ipaddress = getenv('REMOTE_ADDR');
-    else
-        $ipaddress = 'UNKNOWN';
-    return $ipaddress;
 }
 ?>
