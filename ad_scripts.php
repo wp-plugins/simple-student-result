@@ -56,7 +56,8 @@ global $wpdb;
 		  array( 'rid' => mysql_real_escape_string($_POST['rid']), 'roll' => mysql_real_escape_string($_POST['rn']) , 'stdname' => mysql_real_escape_string($_POST['stn']) , 'fathersname' => mysql_real_escape_string($_POST['stfn']) , 'pyear' => mysql_real_escape_string($_POST['stpy']) , 'cgpa' => mysql_real_escape_string($_POST['stcgpa']), 'subject' => mysql_real_escape_string($_POST['stsub']) , 'image' => mysql_real_escape_string($_POST['upload_image']) )
 		);
     }
-$student_count = $wpdb->prepare( "SELECT COUNT(*) FROM ".SSR_TABLE);
+//$student_count =$wpdb->prepare( "SELECT COUNT(*) FROM ".SSR_TABLE);
+$student_count =$wpdb->prepare( "SELECT COUNT(*) FROM $SSR_TABLE" );
 $student_count = $wpdb->get_var($student_count);
 echo $student_count;
 	if ($wpdb->last_error) {
