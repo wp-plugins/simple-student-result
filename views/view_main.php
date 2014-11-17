@@ -1,4 +1,31 @@
 <?php
+
+// Function to get the client IP address
+function SSR_get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+       $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'UNKNOWN';
+    return $ipaddress;
+}
+$arr = json_decode(file_get_contents('http://freegeoip.net/json/'.SSR_get_client_ip()),true);
+if ($arr){
+define( 'SSR_Visitor_Country',  $arr['country_name'] );
+unset($arr);
+}else{define( 'SSR_Visitor_Country',  'unknown');}
+
+	
 if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <div class="ssr_info">
 <p class="ssr_p_t">আপনাকে অনেক ধন্যবাদ এই প্লাগিন ব্যাবহার করার জন্য</p>
