@@ -20,8 +20,7 @@ register_post_type( 'ssr_cgpa',
     'public' => true,
 	'rewrite' => false,
     'has_archive' => true,
-    'show_in_menu' => 'ssr_add_subs',
-	'supports' => array( 'title', 0, 'thumbnail' )
+    'show_in_menu' => 'ssr_add_subs'
     )
 );
 // Register "New" admin menu bar menu
