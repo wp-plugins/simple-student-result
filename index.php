@@ -2,7 +2,7 @@
  /*
 Plugin Name: Simple Student Result
 Plugin URI: http://saadamin.info/portfolio/ssr
-Description: Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results, demo here : http://saadamin.info/portfolio/ssr
+Description: Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results, <br><a href="http://saadamin.info/portfolio/ssr">Click here for demo</a>
 Author: Saad Amin
 Version: 1.0.1
 Author URI: http://www.saadamin.info
