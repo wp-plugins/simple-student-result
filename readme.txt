@@ -1,6 +1,7 @@
 ﻿=== Simple Student Result ===
 Contributor: Saad Amin
 Donate link: http://bit.ly/donatebypaypal
+Plugin URI: http://www.themepunch.com/revolution
 Tags: student, student result, university, education
 Requires at least: 3.8
 Tested up to: 4.0

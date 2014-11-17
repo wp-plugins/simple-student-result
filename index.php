@@ -1,13 +1,13 @@
 <?php
-/**
- * Plugin Name: Simple Student Result
- * Plugin URI: http://saadamin.info/portfolio/ssr
- * Description: Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results.
- * Version: 1.0.1
- * Author: Saad Amin
- * Author URI: http://www.saadamin.info
- * License: GPL2
- */
+ /*
+Plugin Name: Simple Student Result
+Plugin URI: http://saadamin.info/portfolio/ssr
+Description: Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results.
+Author: Saad Amin
+Version: 1.0.1
+Author URI: http://www.saadamin.info
+License: GPL2
+*/
 define('SSR_ROOT_FILE', __FILE__);
 define('SSR_ROOT_PATH', dirname(__FILE__));
 define('SSR_TABLE', $wpdb->prefix . 'ssr_studentinfo');
