@@ -24,13 +24,6 @@ define( 'SSR_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 	}
 	include SSR_ROOT_PATH.'/ad_scripts.php';
 	include SSR_ROOT_PATH.'/views/ssr_shortcode.php';
-	require_once SSR_ROOT_PATH.'/userip/ip.codehelper.io.php';
-	require_once SSR_ROOT_PATH.'/userip/php_fast_cache.php';
-	$_ip = new ip_codehelper();
-	$real_client_ip_address = $_ip->getRealIP();
-	$visitor_location       = $_ip->getLocation($real_client_ip_address);
-	define( 'SSR_Visitor_Country',  $visitor_location['CountryName'] );
-	define( 'SSR_Visitor_City',  $visitor_location['CityName'] );
 
 
 function SSR_plugin_path( $path = '' ) {
