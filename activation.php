@@ -61,12 +61,30 @@ register_activation_hook(SSR_ROOT_FILE, 'ssr_plugin_install');
 	wp_insert_post( $my_post );
 		$i++;$cgpa=$cgpa+.50;
 	}
-// do your stuff
 $url = get_site_url();
 // The message
 $message = "Congratulation, Simple Student Results is activated on $url ";
 $message = wordwrap($message, 70, "\r\n");
 // Send
 wp_mail('saadvi@gmail.com', 'SSR activated', $message);
+}
+register_deactivation_hook( SSR_ROOT_FILE, 'ssr_deactivate' );
+function ssr_deactivate() {
+$url = get_site_url();
+// The message
+$message = "Deactivated, Simple Student Results is deactivated on $url ";
+$message = wordwrap($message, 70, "\r\n");
+// Send
+wp_mail('saadvi@gmail.com', 'SSR deactivated', $message);
+}
+register_uninstall_hook(SSR_ROOT_FILE, 'ssr_unins');
+
+function ssr_unins() {
+$url = get_site_url();
+// The message
+$message = "Uninstalled, Simple Student Results is uninstalled on $url ";
+$message = wordwrap($message, 70, "\r\n");
+// Send
+wp_mail('saadvi@gmail.com', 'SSR Uninstalled', $message);
 }
 ?>
