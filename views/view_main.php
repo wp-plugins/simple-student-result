@@ -34,6 +34,7 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p">ফলাফলের বছর গত <b class="ssr_st_b_h">১০</b> বছরের টা দেখতে পারবেন  , সুতরাং আপনার কম্পিউটার এর ক্যালেন্ডার এর তারিখ ও বছর ঠিক আছে কিনা দেখবেন।.</p><br>
 <p class="ssr_p">প্লাগিন এ  <b class="ssr_st_b_h">ajax</b> ব্যাবহার করা হয়েছে তাই ফলাফল পাবেন তৎক্ষণাৎ পেজ লোড ছাড়াই.</p>
 <p class="ssr_p">যে কোন সমস্যার ও সাহায্যের জন্য আমাকে কল করতে পারেন  <b class="ssr_st_b_h">01722889212</b>  নাম্বার এ । বা ইমেইল করতে পারেন saadvi@gmail.com ঠিকানায়</p>
+<p class="ssr_p"> [ssr_results] এই shortcode post/page এ ব্যাবহার করুন  ,<a href="http://saadamin.info/portfolio/ssr" target="_blank">যদি ডেমো দেখতে চান  এখানে ক্লিক করুন</a></p>
 </div>
 <?php }else{
 ?>
@@ -42,5 +43,7 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p"><b class="ssr_st_b_h">Shortcode : </b> [ssr_results] </p>
 <p class="ssr_p"><b class="ssr_st_b_h">who can input results :</b>  Author , Administrator , Super Administrator</p>
 <p class="ssr_p">Passing year is for last <b class="ssr_st_b_h">10</b> years , make sure your computer date is up-to-date.</p>
+<p class="ssr_p">Please contact with me if you need more features <a href="mailto:saadvi@gmail.com">saadvi@gmail.com</a></p>
+<p class="ssr_p">Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results  , <a href="http://saadamin.info/portfolio/ssr" target="_blank">Click here for demo</a></p>
 </div>
 <?php } ?>
