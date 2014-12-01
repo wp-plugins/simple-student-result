@@ -1,13 +1,12 @@
 ﻿=== Simple Student Result ===
-Contributor: saadamin
+Contributors: saadamin
 Donate link: http://bit.ly/donatebypaypal
 Plugin URI: http://saadamin.info/portfolio/ssr
-Tags: student, student result, university, education
+Tags: student, student result, university, education, result, result system, student, academic, student database, academic result
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 4.0
+Tested up to: 4.0.1
+Stable tag: 4.0.1
 License: licensed under “GPLv2 or later”
-Contributors: Saad Amin
 
 A simple student result plugin. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
 
