@@ -50,13 +50,18 @@ add_action( 'wp_ajax_ssr_add_st_submit', 'fn_ssr_add_st_submit' );
 function fn_ssr_add_st_submit() {
 global $wpdb;
     if (isset($_POST['rid'])) {
-		$wpdb->delete( SSR_TABLE, array( 'rid' => mysql_real_escape_string($_POST['rid']) ) );
-		$wpdb->insert(
-		  SSR_TABLE,
-		  array( 'rid' => mysql_real_escape_string($_POST['rid']), 'roll' => mysql_real_escape_string($_POST['rn']) , 'stdname' => mysql_real_escape_string($_POST['stn']) , 'fathersname' => mysql_real_escape_string($_POST['stfn']) , 'pyear' => mysql_real_escape_string($_POST['stpy']) , 'cgpa' => mysql_real_escape_string($_POST['stcgpa']), 'subject' => mysql_real_escape_string($_POST['stsub']) , 'image' => mysql_real_escape_string($_POST['upload_image']) )
-		);
+		$wpdb->delete( $wpdb->prefix.SSR_TABLE, array( 'rid' => $_POST['rid']) );
+		$wpdb->query( $wpdb->prepare( 
+							"INSERT INTO ".$wpdb->prefix.SSR_TABLE."
+								( rid, roll, stdname, fathersname, pyear, cgpa, subject, image  )
+								VALUES ( %d, %s, %s, %s, %s, %s, %s, %s )", 
+							array(
+							$_POST['rid'],$_POST['rn'],$_POST['stn'],$_POST['stfn'],$_POST['stpy'],$_POST['stcgpa'], $_POST['stsub'] , $_POST['upload_image']
+							) 
+		) );
+
     }
-$student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".SSR_TABLE );
+$student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE );
 echo $student_count;
 	if ($wpdb->last_error) {
   die('error=' . var_dump($wpdb->last_query) . ',' . var_dump($wpdb->error));
@@ -66,15 +71,15 @@ die();
 add_action( 'wp_ajax_nopriv_ssr_del_st_submit', 'fn_ssr_del_st_submit' );
 add_action( 'wp_ajax_ssr_del_st_submit', 'fn_ssr_del_st_submit' );
 function fn_ssr_del_st_submit() {
-?><script type="text/javascript">console.log(<?php echo $_POST['rid']; ?>);</script><?php
+?><script type="text/javascript">console.log(<?php echo 'Deleted ID : '.$_POST['rid']; ?>);</script><?php
 global $wpdb;
     if (isset($_POST['rid'])) {
-		$student_count =$wpdb->get_var($wpdb->prepare( "SELECT COUNT(*) FROM ".SSR_TABLE." where rid=%d", mysql_real_escape_string($_POST['rid']) ));
+		$student_count =$wpdb->get_var($wpdb->prepare( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE." where rid=%d", $_POST['rid'] ));
     }
 if ($student_count>0){
-$student_count =$wpdb->prepare( "delete from ".SSR_TABLE." where rid=%d", mysql_real_escape_string($_POST['rid']) );
+$student_count =$wpdb->prepare( "delete from ".$wpdb->prefix.SSR_TABLE." where rid=%d", $_POST['rid'] );
 $wpdb->query($student_count);
-$student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".SSR_TABLE );
+$student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE );
 echo $student_count;
 }else{echo 'no';}
 	if ($wpdb->last_error) {

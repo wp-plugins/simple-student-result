@@ -19,12 +19,27 @@ function SSR_get_client_ip() {
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
 }
-$arr = json_decode(file_get_contents('http://freegeoip.net/json/'.SSR_get_client_ip()),true);
+if (SSR_get_client_ip()!='127.0.0.1'){
+set_error_handler(
+    create_function(
+        '$severity, $message, $file, $line',
+        'throw new ErrorException($message, $severity, $severity, $file, $line);'
+    )
+);
+try {
+    $arr = json_decode(file_get_contents('http://freegeoip.net/json/'.SSR_get_client_ip()),true);
+} catch (Exception $e) {
+    echo '<br>';
+
+}
+
+restore_error_handler();
+
 if ($arr){
 define( 'SSR_Visitor_Country',  $arr['country_name'] );
 unset($arr);
 }else{define( 'SSR_Visitor_Country',  'unknown');}
-
+}else define( 'SSR_Visitor_Country',  'unknown');
 	
 if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <div class="ssr_info">

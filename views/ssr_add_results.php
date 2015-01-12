@@ -1,6 +1,6 @@
 <?php
 global $wpdb;
-$student_count =$wpdb->get_var("SELECT COUNT(*) FROM ".SSR_TABLE );
+$student_count =$wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE );
 echo '<div id="dbinfo">';
 if ($student_count>1) {echo "{$student_count} Students are in Database";}else{if ($student_count>0){echo "{$student_count} Student is in Database";}else{echo "No Student is in Database";}}
 echo '</div>';

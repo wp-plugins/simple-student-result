@@ -74,6 +74,10 @@ function ssr_register_custom_menu_page(){
     add_submenu_page('Student_Result', 'Add CGPA', 'Add CGPA', 'publish_pages', 'post-new.php?post_type=ssr_cgpa');
     add_submenu_page('Student_Result', 'View Subjects', 'Subjects', 'publish_pages', 'edit.php?post_type=ssr_subjects');
 	add_submenu_page('Student_Result', 'Add Subjects', 'Add Subjects', 'publish_pages', 'post-new.php?post_type=ssr_subjects');
+	add_submenu_page('Student_Result', 'Settings', 'Settings', 'publish_pages', 'ssr_settings', 'ssr_router');
+	
+		//call register settings function
+		add_action( 'admin_init', 'register_mysettings' );
 }
 function ssr_router() {
 
@@ -82,7 +86,8 @@ function ssr_router() {
 
 	if(strpos($screen->base, 'ssr_add_results') !== false) {
 		include(SSR_ROOT_PATH.'/views/ssr_add_results.php');
-
+	} elseif  (strpos($screen->base, 'ssr_settings') !== false) {
+		include(SSR_ROOT_PATH.'/views/options.php');
 	} else {
 		include(SSR_ROOT_PATH.'/views/view_main.php');
 	}
@@ -107,4 +112,10 @@ function ssr_add_ajaxurl_cdata_to_front(){ ?>
 add_action( 'wp_head', 'ssr_add_ajaxurl_cdata_to_front', 1);
 
 
+function register_mysettings() {
+	//register our settings
+	register_setting( 'ssr_settings_group', 'ssr_search_box_text' );
+	register_setting( 'ssr_settings_group', 'some_other_option' );
+	register_setting( 'ssr_settings_group', 'option_etc' );
+}
 ?>

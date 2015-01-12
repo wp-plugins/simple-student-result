@@ -41,7 +41,7 @@ position: relative;
 max-width: 700px;
 overflow: hidden;
 clear: both;
-opacity: .1;
+opacity: 0;
 webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
@@ -54,3 +54,34 @@ webkit-transition: all .5s ease-in-out;
 .sep {min-height: 30px;overflow:hidden;}
 #st_img2 {width:200px;height:200px;}
 .std_subview {width: 538px;position: absolute;right: 0;padding: 0 !important;margin: 0;height: 22px;left:160px;min-width:270px;}
+#ssr_msgbox {display:none;
+text-align: center;
+font-size: 61px;
+text-transform: uppercase;
+color: #FFF;
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+background: black;
+height: 195px;
+position: absolute;
+width: 97%;
+padding-top: 98px;
+margin-top: 7px;
+font-family: arial;
+}
+.successModal {
+    display: block;
+    position: fixed;
+    top: 45%;
+    left: 25%;
+    width: 300px;
+    height: auto;
+    padding: 5px 20px;
+    border: 3px solid green;
+    background-color: #EFE;
+    z-index:1002;
+    overflow: auto;
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px;
+    -moz-box-shadow: 5px 5px 10px #cfcfcf;
+    -webkit-box-shadow: 5px 5px 10px #cfcfcf;
+}
