@@ -75,6 +75,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.2.3 Minor Bug fixed .
  1.2.2 Major Bug fixed , Settings page added.
  1.0.2 General improvements.
  1.0.1 fixed saveral bugs.
