@@ -25,12 +25,17 @@ function ssr_my_admin_scripts() {
         wp_enqueue_script('zebra_dialog_js');
         wp_enqueue_script('jquery_ui_shake');
 		//STYLES
-		wp_enqueue_style( 'SSR_admin_css', SSR_plugin_url( 'css/admin-style.css' ), false, SSR_VERSION );
 		wp_enqueue_style( 'SSR_zebra_dialog_css', SSR_plugin_url( 'css/zebra_dialog.css' ), false, '1.3.8' );
     }
 	if (isset($_GET['page']) && $_GET['page'] == 'Student_Result') {
 		wp_enqueue_style( 'SSR_viewst_css', SSR_plugin_url( 'css/ssr_viewst.css' ), false, SSR_VERSION );
 	}
+	if (isset($_GET['page']) && $_GET['page'] == 'ssr_all_entires') {
+			wp_register_script('ssr_jquery_ui_column', SSR_plugin_url( '/js/jquery.columns-1.0.min.js'), array('jquery'),'1.11.1');
+			wp_enqueue_script('ssr_jquery_ui_column');
+	}
+	wp_enqueue_style( 'SSR_admin_css', SSR_plugin_url( 'css/admin-style.css' ), false, SSR_VERSION );
+	wp_enqueue_style( 'SSR_admin_others_css', SSR_plugin_url( 'css/others.css' ), false, SSR_VERSION );
 }
 //FRONT END OR VISITORS SCRIPTS
 add_action( 'wp_enqueue_scripts', 'ssr_do_enqueue_scripts' );
@@ -51,6 +56,8 @@ function fn_ssr_add_st_submit() {
 global $wpdb;
     if (isset($_POST['rid'])) {
 		$wpdb->delete( $wpdb->prefix.SSR_TABLE, array( 'rid' => $_POST['rid']) );
+		$tf='Please fill out this field.';
+		if ($_POST['stpy']==$tf) $_POST['stpy']='';if ($_POST['stcgpa']==$tf) $_POST['stcgpa']='';if ($_POST['stsub']==$tf) $_POST['stsub']='';
 		$wpdb->query( $wpdb->prepare( 
 							"INSERT INTO ".$wpdb->prefix.SSR_TABLE."
 								( rid, roll, stdname, fathersname, pyear, cgpa, subject, image  )

@@ -2,8 +2,8 @@
 register_post_type( 'ssr_subjects',
     array(
             'labels' => array(
-                    'name' => __( 'Subjects' ),
-                    'singular_name' => __( 'Subject' )
+                    'name' => __( esc_attr( get_option('ssr_menu_2nd_custom_slug') ) ),
+                    'singular_name' => __( esc_attr( get_option('ssr_menu_2nd_custom_slug') ) )
             ),
     'public' => true,
 	'rewrite' => false,
@@ -14,8 +14,8 @@ register_post_type( 'ssr_subjects',
 register_post_type( 'ssr_cgpa',
     array(
             'labels' => array(
-                    'name' => __( 'CGPA' ),
-                    'singular_name' => __( 'CGPA' )
+                    'name' => __( esc_attr( get_option('ssr_menu_1st_custom_slug') ) ),
+                    'singular_name' => __( esc_attr( get_option('ssr_menu_1st_custom_slug') ) )
             ),
     'public' => true,
 	'rewrite' => false,
@@ -40,25 +40,25 @@ function ssr_admin_bar($wp_admin_bar) {
 	$wp_admin_bar->add_node(array(
 		'parent' => 'ab-ssr-add-new',
 		'id'    => 'ab-ssr-subject',
-		'title' => 'View Subjects',
+		'title' => 'View '.esc_attr( get_option('ssr_menu_2nd_custom_slug') ),
 		'href'  => admin_url('edit.php?post_type=ssr_subjects')
 	));
 	$wp_admin_bar->add_node(array(
 		'parent' => 'ab-ssr-add-new',
 		'id'    => 'ab-ssr-subject-add',
-		'title' => 'Add Subjects',
+		'title' => 'Add '.esc_attr( get_option('ssr_menu_2nd_custom_slug') ),
 		'href'  => admin_url('post-new.php?post_type=ssr_subjects')
 	));
 	$wp_admin_bar->add_node(array(
 		'parent' => 'ab-ssr-add-new',
 		'id'    => 'ab-ssr-cgpa',
-		'title' => 'View CGPA',
+		'title' => 'View '.esc_attr( get_option('ssr_menu_1st_custom_slug') ),
 		'href'  => admin_url('edit.php?post_type=ssr_cgpa')
 	));
 	$wp_admin_bar->add_node(array(
 		'parent' => 'ab-ssr-add-new',
 		'id'    => 'ab-ssr-cgpa-add',
-		'title' => 'Add CGPA',
+		'title' => 'Add '.esc_attr( get_option('ssr_menu_1st_custom_slug') ),
 		'href'  => admin_url('post-new.php?post_type=ssr_cgpa')
 	));
 }
@@ -68,12 +68,13 @@ function ssr_register_custom_menu_page(){
 	// Menu hook
 	global $ssr_hook;
     // Add main page
-	$ssr_hook = add_menu_page( 'Students Result', 'Students Results', 'publish_pages', 'Student_Result', 'ssr_router', SSR_plugin_url( 'img/ssr_logo.png'), 6 ); 
-	add_submenu_page('Student_Result', 'Add Student Results', 'Add Results', 'publish_pages', 'ssr_add_results', 'ssr_router');
-    add_submenu_page('Student_Result', 'View CGPA', 'View CGPA', 'publish_pages', 'edit.php?post_type=ssr_cgpa');
-    add_submenu_page('Student_Result', 'Add CGPA', 'Add CGPA', 'publish_pages', 'post-new.php?post_type=ssr_cgpa');
-    add_submenu_page('Student_Result', 'View Subjects', 'Subjects', 'publish_pages', 'edit.php?post_type=ssr_subjects');
-	add_submenu_page('Student_Result', 'Add Subjects', 'Add Subjects', 'publish_pages', 'post-new.php?post_type=ssr_subjects');
+	$ssr_hook = add_menu_page( esc_attr( get_option('ssr_menu_slug') ), esc_attr( get_option('ssr_menu_slug') ), 'publish_pages', 'Student_Result', 'ssr_router', SSR_plugin_url( 'img/ssr_logo.png'), 6 );
+	add_submenu_page('Student_Result', 'All_Entries', 'All '.esc_attr( get_option('ssr_search_box_ssr_slug') ), 'publish_pages', 'ssr_all_entires', 'ssr_router');
+	add_submenu_page('Student_Result', 'Add Student Results', 'Add '.esc_attr( get_option('ssr_search_box_ssr_slug') ), 'publish_pages', 'ssr_add_results', 'ssr_router');
+    add_submenu_page('Student_Result', 'View '.esc_attr( get_option('ssr_menu_1st_custom_slug') ), 'View '.esc_attr( get_option('ssr_menu_1st_custom_slug') ), 'publish_pages', 'edit.php?post_type=ssr_cgpa');
+    add_submenu_page('Student_Result', 'Add '.esc_attr( get_option('ssr_menu_1st_custom_slug') ), 'Add '.esc_attr( get_option('ssr_menu_1st_custom_slug') ), 'publish_pages', 'post-new.php?post_type=ssr_cgpa');
+    add_submenu_page('Student_Result', 'View '.esc_attr( get_option('ssr_menu_2nd_custom_slug') ), esc_attr( get_option('ssr_menu_2nd_custom_slug') ), 'publish_pages', 'edit.php?post_type=ssr_subjects');
+	add_submenu_page('Student_Result', 'Add '.esc_attr( get_option('ssr_menu_2nd_custom_slug') ), 'Add '.esc_attr( get_option('ssr_menu_2nd_custom_slug') ), 'publish_pages', 'post-new.php?post_type=ssr_subjects');
 	add_submenu_page('Student_Result', 'Settings', 'Settings', 'publish_pages', 'ssr_settings', 'ssr_router');
 	
 		//call register settings function
@@ -86,7 +87,9 @@ function ssr_router() {
 
 	if(strpos($screen->base, 'ssr_add_results') !== false) {
 		include(SSR_ROOT_PATH.'/views/ssr_add_results.php');
-	} elseif  (strpos($screen->base, 'ssr_settings') !== false) {
+	} elseif  (strpos($screen->base, 'ssr_all_entires') !== false) {
+		include(SSR_ROOT_PATH.'/views/all_entries.php');
+	}elseif  (strpos($screen->base, 'ssr_settings') !== false) {
 		include(SSR_ROOT_PATH.'/views/options.php');
 	} else {
 		include(SSR_ROOT_PATH.'/views/view_main.php');

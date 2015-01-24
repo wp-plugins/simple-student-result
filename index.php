@@ -4,7 +4,7 @@ Plugin Name: Simple Student Result
 Plugin URI: http://saadamin.info/portfolio/ssr
 Description: Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results  , <a href="http://saadamin.info/portfolio/ssr" target="_blank">Click here for demo</a>
 Author: Saad Amin
-Version: 1.2.3
+Version: 1.3.0
 Author URI: http://www.saadamin.info
 License: GPL2
 */
@@ -12,7 +12,7 @@ define('SSR_ROOT_FILE', __FILE__);
 define('SSR_ROOT_PATH', dirname(__FILE__));
 //define('SSR_TABLE', $wpdb->prefix.'ssr_studentinfo');
 define('SSR_TABLE', 'ssr_studentinfo');
-define('SSR_VERSION', '1.2.3');
+define('SSR_VERSION', '1.3.0');
 define( 'SSR_REQUIRED_WP_VERSION', '3.8' );
 define( 'SSR_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'SSR_PLUGIN_NAME', 'Simple Student Result' );

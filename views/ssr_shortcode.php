@@ -13,18 +13,19 @@ function ssr_show_results( $atts ) {
 	<div id="ssr_msgbox"><?php echo esc_attr( get_option('ssr_search_box_no_result_text') ); ?></div>
 	<div class="result_box">		
 		<div class="dte">
+		<h1 class="ssr_search_box_heading"><?php echo esc_attr( get_option('ssr_search_box_heading') ); ?></h1>
+			<div class="image_box">
+				<img id="st_img2" src="" alt="" width="200px" height="auto"/>
+			</div>
 			<div style="width: 100%;height: 20px;"></div>
-			<div class="sep"><span class="std_title">Registration Number :</span><input type="text" id="rid2" class="std_input" readonly></div>
-			<div class="sep"><span class="std_title">Roll No : </span><input type="text" id="rn2" class="std_input" readonly></div>
-			<div class="sep"><span class="std_title">Student Name :</span><input type="text" id="stn2" class="std_input" readonly></div>
-			<div class="sep"><span class="std_title">Fathers Name :</span><input type="text" id="stfn2" class="std_input" readonly></div>
-			<div class="sep"><span class="std_title">Passing Year :</span><input type="text" id="stpy2" class="std_input" readonly></div>
-			<div class="sep"><span class="std_title">CGPA :</span><input type="text" id="stcgpa2" class="std_input" readonly></div>
-			<div class="sep"><span class="std_title">Subject :</span><input type="text" id="stsub2" class="std_subview" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item1') ); ?> :</span><input type="text" id="rid2" class="std_input" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item2') ); ?> : </span><input type="text" id="rn2" class="std_input" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item3') ); ?> :</span><input type="text" id="stn2" class="std_input" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item4') ); ?> :</span><input type="text" id="stfn2" class="std_input" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item5') ); ?> :</span><input type="text" id="stpy2" class="std_input" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item6') ); ?> :</span><input type="text" id="stcgpa2" class="std_input" readonly></div>
+			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_search_box_ssr_item7') ); ?> :</span><input type="text" id="stsub2" class="std_input" readonly></div>
 		</div><!-- text boxs DTE -->
-		<div class="image_box">
-			<img id="st_img2" src="" alt="" width="200px" height="auto"/>
-		</div>
 	</div><!-- Result Box -->
 </div><!-- result_div -->
 
