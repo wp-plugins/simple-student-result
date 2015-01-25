@@ -75,6 +75,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.3.3 Minor Bug fixed . option variable functions updated.
  1.3.2 Minor Bug fixed . some css issues.
  1.3.1 Minor Bug fixed .
  1.3.0 Minor Bug fixed . A lot of new features added . You can use this plugin for employee database or anything else as well .Now you can change required field , change several text and custom post title, field names , years field is now open for write, and you can see all saved entry as well in add entry page. see the magic when change settings .
