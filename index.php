@@ -51,4 +51,19 @@ function ssr_plugin_action_links($links, $file) {
     }
     return $links;
 }
+if (strlen(esc_attr( get_option('ssr_search_box_text') ))==0) update_option('ssr_search_box_text','Enter Registration ID');
+		if (strlen(esc_attr( get_option('ssr_search_box_no_result_text') ))==0) update_option('ssr_search_box_no_result_text','No Results !');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_slug') ))==0) update_option('ssr_search_box_ssr_slug','Student');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item1') ))==0) update_option('ssr_search_box_ssr_item1','Registration Number');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item2') ))==0) update_option('ssr_search_box_ssr_item2','Roll No');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item3') ))==0) update_option('ssr_search_box_ssr_item3','Student Name');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item4') ))==0) update_option('ssr_search_box_ssr_item4','Fathers Name');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item5') ))==0) update_option('ssr_search_box_ssr_item5','Passing Year');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item6') ))==0) update_option('ssr_search_box_ssr_item6','CGPA');
+		if (strlen(esc_attr( get_option('ssr_search_box_ssr_item7') ))==0) update_option('ssr_search_box_ssr_item7','Subject');
+		if (strlen(esc_attr( get_option('ssr_menu_slug') ))==0) update_option('ssr_menu_slug','Students Result');
+		if (strlen(esc_attr( get_option('ssr_menu_slug_add') ))==0) update_option('ssr_menu_slug_add','Add Student Results');
+		if (strlen(esc_attr( get_option('ssr_menu_1st_custom_slug') ))==0) update_option('ssr_menu_1st_custom_slug','CGPA');
+		if (strlen(esc_attr( get_option('ssr_menu_2nd_custom_slug') ))==0) update_option('ssr_menu_2nd_custom_slug','Subject');
+		if (strlen(esc_attr( get_option('ssr_search_box_heading') ))==0) update_option('ssr_search_box_heading','Online Result System');
 ?>
