@@ -48,23 +48,27 @@ function ssr_plugin_action_links($links, $file) {
     }
     return $links;
 }
-if (strlen(esc_attr( get_option('ssr_version_installed') ))==0){
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('ssr_settings_ssr_item1','Online Result System');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item2') ))==0) update_option('ssr_settings_ssr_item2','Enter Registration ID');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item3') ))==0) update_option('ssr_settings_ssr_item3','No Results !');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item4') ))==0) update_option('ssr_settings_ssr_item4','Student');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item5') ))==0) update_option('ssr_settings_ssr_item5','Students Result');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item6') ))==0) update_option('ssr_settings_ssr_item6','Add Student Results');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item7') ))==0) update_option('ssr_settings_ssr_item7','CGPA');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item8') ))==0) update_option('ssr_settings_ssr_item8','Subject');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item9') ))==0) update_option('ssr_settings_ssr_item9','Registration Number');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item10') ))==0) update_option('ssr_settings_ssr_item10','Roll No');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item11') ))==0) update_option('ssr_settings_ssr_item11','Student Name');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item12') ))==0) update_option('ssr_settings_ssr_item12','Fathers Name');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item13') ))==0) update_option('ssr_settings_ssr_item13','Passing Year');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item14') ))==0) update_option('ssr_settings_ssr_item14','CGPA');
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item15') ))==0) update_option('ssr_settings_ssr_item15','Subject');
-		//$url=get_site_url();$message="Updated, Simple Student Results is updated on $url to".SSR_VERSION;$message=wordwrap($message,70,"\r\n");wp_mail('saadvi@gmail.com','SSR updated to'.SSR_VERSION,$message);
-		update_option('ssr_version_installed','1.3.5');
+function ssr_ihh_check_version(){
+	if (strlen(esc_attr( get_option('ssr_version_installed') ))==0){
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('ssr_settings_ssr_item1','Online Result System');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item2') ))==0) update_option('ssr_settings_ssr_item2','Enter Registration ID');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item3') ))==0) update_option('ssr_settings_ssr_item3','No Results !');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item4') ))==0) update_option('ssr_settings_ssr_item4','Student');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item5') ))==0) update_option('ssr_settings_ssr_item5','Students Result');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item6') ))==0) update_option('ssr_settings_ssr_item6','Add Student Results');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item7') ))==0) update_option('ssr_settings_ssr_item7','CGPA');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item8') ))==0) update_option('ssr_settings_ssr_item8','Subject');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item9') ))==0) update_option('ssr_settings_ssr_item9','Registration Number');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item10') ))==0) update_option('ssr_settings_ssr_item10','Roll No');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item11') ))==0) update_option('ssr_settings_ssr_item11','Student Name');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item12') ))==0) update_option('ssr_settings_ssr_item12','Fathers Name');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item13') ))==0) update_option('ssr_settings_ssr_item13','Passing Year');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item14') ))==0) update_option('ssr_settings_ssr_item14','CGPA');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item15') ))==0) update_option('ssr_settings_ssr_item15','Subject');
+			$url=get_site_url();$message="Updated, Simple Student Results is updated on $url to".SSR_VERSION;$message=wordwrap($message,70,"\r\n");
+			wp_mail('saadvi@gmail.com','SSR updated to version : '.SSR_VERSION,$message);
+			update_option('ssr_version_installed','1.3.5');
+	}
 }
+add_action( 'plugins_loaded', 'ssr_ihh_check_version' );
 ?>
