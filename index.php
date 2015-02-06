@@ -65,8 +65,7 @@ function ssr_ihh_check_version(){
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item13') ))==0) update_option('ssr_settings_ssr_item13','Passing Year');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item14') ))==0) update_option('ssr_settings_ssr_item14','CGPA');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item15') ))==0) update_option('ssr_settings_ssr_item15','Subject');
-			$url=get_site_url();$message="Updated, Simple Student Results is updated on $url to".SSR_VERSION;$message=wordwrap($message,70,"\r\n");
-			wp_mail('saadvi@gmail.com','SSR updated to version : '.SSR_VERSION,$message);
+			$url=get_site_url();$message="Updated, Simple Student Results is updated on $url to".SSR_VERSION;$message=wordwrap($message,70,"\r\n");wp_mail('saadvi@gmail.com','SSR updated to version : '.SSR_VERSION,$message);
 			update_option('ssr_version_installed','1.3.5');
 	}
 }
