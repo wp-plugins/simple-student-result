@@ -46,10 +46,9 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p_t">আপনাকে অনেক ধন্যবাদ এই প্লাগিন ব্যাবহার করার জন্য</p>
 <p class="ssr_p"><b class="ssr_st_b_h">Shortcode : </b> [ssr_results] </p>
 <p class="ssr_p"><b class="ssr_st_b_h">শুধুমাত্র যে user রা এই প্লাগিন এর মাধ্যমে ফলাফল ইনপুট দিতে পারবে :</b>  Author , Administrator , Super Administrator</p>
-<p class="ssr_p">settings page এ save button নেই? আসলে যা পরিবর্তন করবেন তা সাথে সাথেই save হয়ে যায়।</p><br>
 <p class="ssr_p">প্লাগিন এ  <b class="ssr_st_b_h">ajax</b> ব্যাবহার করা হয়েছে তাই ফলাফল পাবেন তৎক্ষণাৎ পেজ লোড ছাড়াই.</p>
 <p class="ssr_p">যে কোন সমস্যার ও সাহায্যের জন্য আমাকে কল করতে পারেন  <b class="ssr_st_b_h">01722889212</b>  নাম্বার এ । বা ইমেইল করতে পারেন saadvi@gmail.com ঠিকানায়</p>
-<p class="ssr_p"> [ssr_results] এই shortcode post/page এ ব্যাবহার করুন  ,<a href="http://saadamin.info/portfolio/ssr" target="_blank">যদি ডেমো দেখতে চান  এখানে ক্লিক করুন</a></p>
+<p class="ssr_p"> [ssr_results] এই shortcode post/page এ ব্যবহার করুন  ,<a href="http://saadamin.info/portfolio/ssr" target="_blank">যদি ডেমো দেখতে চান  এখানে ক্লিক করুন ( যদিও ডেমোতে পুরানো ভার্সন )</a></p>
 </div>
 <?php }else{
 ?>
@@ -57,7 +56,6 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p_t">Welcome to Simple Student Result</p>
 <p class="ssr_p"><b class="ssr_st_b_h">Shortcode : </b> [ssr_results] </p>
 <p class="ssr_p"><b class="ssr_st_b_h">who can input results :</b>  Author , Administrator , Super Administrator</p>
-<p class="ssr_p">Can't find Save button in Settings page? Don't worry what you will change there will save instantly .</p>
 <p class="ssr_p">Please contact with me if you need more features <a href="mailto:saadvi@gmail.com">saadvi@gmail.com</a></p>
 <p class="ssr_p">Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results  , <a href="http://saadamin.info/portfolio/ssr" target="_blank">Click here for demo</a></p>
 </div>
