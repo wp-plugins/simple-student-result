@@ -24,7 +24,7 @@ if ($student_count>0) echo '<div id="example1"></div>';
 {
 $q="{'".esc_attr( get_option('ssr_settings_ssr_item9') )."':". $row->rid.", '".esc_attr( get_option('ssr_settings_ssr_item10') )."':'".$row->roll."', '".esc_attr( get_option('ssr_settings_ssr_item11') )."':'".$row->stdname."', '".esc_attr( get_option('ssr_settings_ssr_item12') )."':'".$row->fathersname."', '".esc_attr( get_option('ssr_settings_ssr_item13') )."':'".$row->pyear."', '".esc_attr( get_option('ssr_settings_ssr_item14') )."':'".$row->cgpa."', '".esc_attr( get_option('ssr_settings_ssr_item15') )."':'".$row->subject."'}";
   $i++;
-  if($i != $user_count) {$q=$q.',';}
+  if($i !== $user_count) {$q=$q.',';}
 echo $q;
 }
 				}?>
