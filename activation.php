@@ -39,6 +39,6 @@ if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item13') ))==0) update_option('ssr_settings_ssr_item13','Passing Year');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item14') ))==0) update_option('ssr_settings_ssr_item14','CGPA');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item15') ))==0) update_option('ssr_settings_ssr_item15','Subject');
-update_option('ssr_version_installed','1.3.5');
+update_option('ssr_version_installed',SSR_VERSION);
 }
 		?>
