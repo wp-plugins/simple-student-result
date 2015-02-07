@@ -64,10 +64,157 @@ echo '</div>';
 		<img id="st_img" src="" alt="" width="200px" height="auto"/>
 	</div>
 </div><!-- Result Box -->
+
+
 <script>
 jQuery(document).ready(function(e) {
-function s(){for(vx=0,i=0;i<required.length;i++){var e=jQuery("#"+required[i]);(""==e.val()||e.val()==emptyerror||0==e.length)&&vx++}vx>0?jQuery("#btn_save").addClass("disable"):jQuery("#btn_save").removeClass("disable")}function r(){for(vx=0,i=0;i<required.length;i++){var e=jQuery("#"+required[i]);""==e.val()||e.val()==emptyerror||0==e.length?vx++:e.removeClass("needsfilled")}}function t(){for(i=0;i<required.length;i++){var t=jQuery("#"+required[i]);t.val(emptyerror)}e("#st_img").attr("src","")}function a(){for(i=1;i<required.length;i++){var t=jQuery("#"+required[i]);t.val(emptyerror)}e("#st_img").attr("src","")}
+    function s() {
+        for (vx = 0, i = 0; i < required.length; i++) {
+            var e = jQuery("#" + required[i]);
+            ("" == e.val() || e.val() == emptyerror || 0 == e.length) && vx++
+        }
+        vx > 0 ? jQuery("#btn_save").addClass("disable") : jQuery("#btn_save").removeClass("disable")
+    }
+
+    function r() {
+        for (vx = 0, i = 0; i < required.length; i++) {
+            var e = jQuery("#" + required[i]);
+            "" == e.val() || e.val() == emptyerror || 0 == e.length ? vx++ : e.removeClass("needsfilled")
+        }
+    }
+
+    function t() {
+        for (i = 0; i < required.length; i++) {
+            var s = jQuery("#" + required[i]);
+            s.val(emptyerror)
+        }
+        e("#st_img").attr("src", "")
+    }
+
+    function a() {
+        for (i = 1; i < required.length; i++) {
+            var s = jQuery("#" + required[i]);
+            s.val(emptyerror)
+        }
+        e("#st_img").attr("src", "")
+    }
     required = ["rid" <?php if (esc_attr( get_option('checkedssr_item2') )>0) {echo ',"rn"';} if (esc_attr( get_option('checkedssr_item3') )>0) {echo ',"stn"';} if (esc_attr( get_option('checkedssr_item4') )>0) {echo ',"stfn"';} if (esc_attr( get_option('checkedssr_item5') )>0) {echo ',"stpy"';} if (esc_attr( get_option('checkedssr_item6') )>0) {echo ',"stcgpa"';} if (esc_attr( get_option('checkedssr_item7') )>0) {echo ',"stsub"';} ?>], emptyerror = "Please fill out this field.";
-var u;e("#upload_image_button").click(function(t){return t.preventDefault(),u?void u.open():(u=wp.media.frames.file_frame=wp.media({title:"Choose Image",button:{text:"Choose Image"},multiple:!1}),u.on("select",function(){attachment=u.state().get("selection").first().toJSON(),e("#upload_image").val(attachment.url),e("#st_img").attr("src",attachment.url)}),void u.open())}),e("#upload_image").click(function(){e("#upload_image_button").click()}),jQuery(document.body).click(function(){jQuery(".std_input").each(function(){s()})}),jQuery("#btn_save").click(function(){for(vx=0,i=0;i<required.length;i++){var n=jQuery("#"+required[i]);""==n.val()||n.val()==emptyerror||0==n.length?(n.addClass("needsfilled"),n.effect("shake"),n.val(emptyerror),vx++):n.removeClass("needsfilled")}vx>0?jQuery("#btn_save").addClass("disable"):jQuery("#btn_save").removeClass("disable"),jQuery("#btn_save").hasClass("disable")||jQuery.post(SSR_Ajax.ajaxurl,{action:"ssr_add_st_submit",rid:jQuery.trim(jQuery("#rid").val()),rn:jQuery("#rn").val(),stn:jQuery("#stn").val(),stfn:jQuery("#stfn").val(),stpy:jQuery("#stpy").val(),stcgpa:jQuery("#stcgpa").val(),stsub:jQuery("#stsub").val(),upload_image:jQuery("#upload_image").val()},function(n){t(),jQuery("#btn_delete").css({opacity:.1,cursor:"no-drop"}),jQuery("#btn_save").addClass("ssr_btn_save"),jQuery("#btn_save").removeClass("ssr_btn_update"),e("#btn_save").html("Save"),jQuery("#dbinfo").html(n>1?n+" Students are in Database":n+" Student is in Database"),new jQuery.Zebra_Dialog("This Student Has Been Saved successfully",{buttons:!1,type:"confirmation",title:"Confirmation",modal:!1,auto_close:2e3})});jQuery("div.sep input").val("");jQuery("div.sep select").val("Please fill out this field.")}),jQuery("#rid").live("keyup",function(){if(jQuery("#rid").val().length>0){jQuery.post(SSR_Ajax.ajaxurl,{action:"ssr_view_st_submit",postID:jQuery.trim(jQuery("#rid").val())},function(t){if("no"!=jQuery.trim(t)){var n=t.search("Rollg:XS")+8,i=t.search("Stdge:XS");e("#rn").val(t.substring(n,i));var n=t.search("Fxtge:XS");e("#stn").val(t.substring(i+8,n));var i=t.search("pYear:XS");e("#stfn").val(t.substring(n+8,i));var n=t.search("sCGPA:XS");e("#stpy").val(t.substring(i+8,n));var i=t.search("sSjct:XS");e("#stcgpa").val(t.substring(n+8,i));var n=t.search("stIme:XS");e("#stsub").val(t.substring(i+8,n));var i=t.length;e("#upload_image").val(t.substring(n+8,i)),e("#st_img").attr("src",t.substring(n+8,i));jQuery("#btn_delete").css({opacity:1,cursor:"pointer"});jQuery("#btn_save").removeClass("disable"),jQuery("#btn_save").removeClass("ssr_btn_save"),jQuery("#btn_save").addClass("ssr_btn_update"),e("#btn_save").html("Update"),r();jQuery("#btn_save").css({opacity:1,cursor:"pointer"})}else{a();jQuery("#btn_delete").css({opacity:.1,cursor:"no-drop"});jQuery("#btn_save").css({opacity:1,cursor:"pointer"});jQuery("#btn_save").addClass("ssr_btn_save");jQuery("#btn_save").removeClass("ssr_btn_update");e("#btn_save").html("Save");console.log(t)}jQuery("div.sep input").css({opacity:1,cursor:"inherit"});jQuery("div.sep select").css({opacity:1,cursor:"inherit"})})}else{jQuery("#btn_delete").css({opacity:.1,cursor:"no-drop"});jQuery("#btn_save").css({opacity:.1,cursor:"no-drop"});jQuery("div.sep input").css({opacity:.1,cursor:"no-drop"});jQuery("div.sep select").css({opacity:.1,cursor:"no-drop"});jQuery("div.sep input").val("");jQuery("div.sep select").val("Please fill out this field.");jQuery("#btn_save").addClass("ssr_btn_save"),jQuery("#btn_save").removeClass("ssr_btn_update"),e("#btn_save").html("Save")}});jQuery("#btn_delete").click(function(){1==jQuery("#btn_delete").css("opacity")&&jQuery.Zebra_Dialog("Are you <strong>Sure</strong>You want to Delete?",{type:"question",title:"Custom buttons",buttons:[{caption:"Yes",callback:function(){jQuery.post(SSR_Ajax.ajaxurl,{action:"ssr_del_st_submit",rid:jQuery.trim(jQuery("#rid").val())},function(n){console.log(n),jQuery("div.sep input").val(""),jQuery("div.sep select").val("Please fill out this field."),t(),jQuery("#btn_delete").css({opacity:.1,cursor:"no-drop"}),jQuery("#btn_save").addClass("ssr_btn_save"),jQuery("#btn_save").removeClass("ssr_btn_update"),e("#btn_save").html("Save"),jQuery("#dbinfo").html(n>1?n+" Students are in Database":n+" Student is in Database"),new jQuery.Zebra_Dialog("<strong>Deleted </strong> Successfully",{buttons:!1,type:"confirmation",title:"Confirmation",modal:!1,auto_close:2e3})})}},{caption:"No",callback:function(){}}]})}),jQuery("#rid").keydown(function(e){return 32==e.keyCode?!1:void 0}),jQuery("#rn").keydown(function(e){return 32==e.keyCode?!1:void 0})
+    var u;
+    e("#upload_image_button").click(function(s) {
+        return s.preventDefault(), u ? void u.open() : (u = wp.media.frames.file_frame = wp.media({
+            title: "Choose Image",
+            button: {
+                text: "Choose Image"
+            },
+            multiple: !1
+        }), u.on("select", function() {
+            attachment = u.state().get("selection").first().toJSON(), e("#upload_image").val(attachment.url), e("#st_img").attr("src", attachment.url)
+        }), void u.open())
+    }), e("#upload_image").click(function() {
+        e("#upload_image_button").click()
+    }), jQuery(document.body).click(function() {
+        jQuery(".std_input").each(function() {
+            s()
+        })
+    }), jQuery("#btn_save").click(function() {
+        for (vx = 0, i = 0; i < required.length; i++) {
+            var s = jQuery("#" + required[i]);
+            "" == s.val() || s.val() == emptyerror || 0 == s.length ? (s.addClass("needsfilled"), s.effect("shake"), s.val(emptyerror), vx++) : s.removeClass("needsfilled")
+        }
+        vx > 0 ? jQuery("#btn_save").addClass("disable") : jQuery("#btn_save").removeClass("disable"), jQuery("#btn_save").hasClass("disable") || jQuery.post(SSR_Ajax.ajaxurl, {
+            action: "ssr_add_st_submit",
+            rid: jQuery.trim(jQuery("#rid").val()),
+            rn: jQuery("#rn").val(),
+            stn: jQuery("#stn").val(),
+            stfn: jQuery("#stfn").val(),
+            stpy: jQuery("#stpy").val(),
+            stcgpa: jQuery("#stcgpa").val(),
+            stsub: jQuery("#stsub").val(),
+            upload_image: jQuery("#upload_image").val()
+        }, function(s) {
+            t(), jQuery("#btn_delete").css({
+                opacity: .1,
+                cursor: "no-drop"
+            }), jQuery("#btn_save").addClass("ssr_btn_save"), jQuery("#btn_save").removeClass("ssr_btn_update"), e("#btn_save").html("Save"), jQuery("#dbinfo").html(s > 1 ? s + " Students are in Database" : s + " Student is in Database"), new jQuery.Zebra_Dialog("This Student Has Been Saved successfully", {
+                buttons: !1,
+                type: "confirmation",
+                title: "Confirmation",
+                modal: !1,
+                auto_close: 2e3
+            })
+        })
+		jQuery("div.sep input").val("");jQuery("div.sep select").val("Please fill out this field.");
+    }), jQuery("#rid").live("keyup", function() {
+        if(jQuery("#rid").val().length > 0) {
+			jQuery.post(SSR_Ajax.ajaxurl, {
+				action: "ssr_view_st_submit",
+				postID: jQuery.trim(jQuery("#rid").val())
+			}, function(s) {
+				if ("no" != jQuery.trim(s)) {
+					var t = s.search("Rollg:XS") + 8,
+						u = s.search("Stdge:XS");
+					e("#rn").val(s.substring(t, u));
+					var t = s.search("Fxtge:XS");
+					e("#stn").val(s.substring(u + 8, t));
+					var u = s.search("pYear:XS");
+					e("#stfn").val(s.substring(t + 8, u));
+					var t = s.search("sCGPA:XS");
+					e("#stpy").val(s.substring(u + 8, t));
+					var u = s.search("sSjct:XS");
+					e("#stcgpa").val(s.substring(t + 8, u));
+					var t = s.search("stIme:XS");
+					e("#stsub").val(s.substring(u + 8, t));
+					var u = s.length;
+					e("#upload_image").val(s.substring(t + 8, u)), e("#st_img").attr("src", s.substring(t + 8, u));
+					jQuery("#btn_delete").css({opacity: 1,cursor: "pointer"});
+					jQuery("#btn_save").removeClass("disable"), jQuery("#btn_save").removeClass("ssr_btn_save"), jQuery("#btn_save").addClass("ssr_btn_update"), e("#btn_save").html("Update"), r();jQuery("#btn_save").css({opacity: 1,cursor: "pointer"});
+				} else {a(); 
+						jQuery("#btn_delete").css({opacity: .1,cursor: "no-drop"});jQuery("#btn_save").css({opacity: 1,cursor: "pointer"});
+						jQuery("#btn_save").addClass("ssr_btn_save");jQuery("#btn_save").removeClass("ssr_btn_update"); e("#btn_save").html("Save"); console.log(s);
+					}
+					jQuery("div.sep input").css({opacity: 1,cursor: "inherit"});jQuery("div.sep select").css({opacity: 1,cursor: "inherit"});
+			})
+			}else{
+				jQuery("#btn_delete").css({opacity: .1,cursor: "no-drop"});
+				jQuery("#btn_save").css({opacity: .1,cursor: "no-drop"});
+				jQuery("div.sep input").css({opacity: .1,cursor: "no-drop"});jQuery("div.sep select").css({opacity: .1,cursor: "no-drop"});
+				jQuery("div.sep input").val("");jQuery("div.sep select").val("Please fill out this field.");jQuery("#btn_save").addClass("ssr_btn_save"), jQuery("#btn_save").removeClass("ssr_btn_update"), e("#btn_save").html("Save");
+			}
+    })
+	
+	jQuery("#btn_delete").click(function() {
+        1 == jQuery("#btn_delete").css("opacity") && jQuery.Zebra_Dialog("Are you <strong>Sure</strong>You want to Delete?", {
+            type: "question",
+            title: "Custom buttons",
+            buttons: [{
+                caption: "Yes",
+                callback: function() {
+                    jQuery.post(SSR_Ajax.ajaxurl, {
+                        action: "ssr_del_st_submit",
+                        rid: jQuery.trim(jQuery("#rid").val())
+                    }, function(s) {
+                        console.log(s),jQuery("div.sep input").val(""),jQuery("div.sep select").val("Please fill out this field."), t(), jQuery("#btn_delete").css({
+                            opacity: .1,
+                            cursor: "no-drop"
+                        }), jQuery("#btn_save").addClass("ssr_btn_save"), jQuery("#btn_save").removeClass("ssr_btn_update"), e("#btn_save").html("Save"), jQuery("#dbinfo").html(s > 1 ? s + " Students are in Database" : s + " Student is in Database"), new jQuery.Zebra_Dialog("<strong>Deleted </strong> Successfully", {
+                            buttons: !1,
+                            type: "confirmation",
+                            title: "Confirmation",
+                            modal: !1,
+                            auto_close: 2e3
+                        })
+                    })
+                }
+            }, {
+                caption: "No",
+                callback: function() {}
+            }]
+        })
+    }), jQuery("#rid").keydown(function(e) {
+        return 32 == e.keyCode ? !1 : void 0
+    }), jQuery("#rn").keydown(function(e) {
+        return 32 == e.keyCode ? !1 : void 0
+    })
 })
-</script>
+
+		</script>

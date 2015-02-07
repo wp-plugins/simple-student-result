@@ -17,7 +17,11 @@ function ssr_show_results( $atts ) {
 			<div class="image_box">
 				<img id="st_img2" src="" alt="" width="200px" height="auto"/>
 			</div>
-			<div style="width: 100%;height: 20px;"></div>
+			<div id="ssr_frnt_circle">
+				<div class="circle_top"></div>
+				<div class="circle"></div>
+				<div class="circle1"></div>
+			</div>
 			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item9') ); ?> :</span><input type="text" id="rid2" class="std_input" readonly></div>
 			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item10') ); ?> : </span><input type="text" id="rn2" class="std_input" readonly></div>
 			<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item11') ); ?> :</span><input type="text" id="stn2" class="std_input" readonly></div>
