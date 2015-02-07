@@ -15,7 +15,7 @@ register_activation_hook(SSR_ROOT_FILE,'ssr_plugin_install');function ssr_plugin
 		register_deactivation_hook(SSR_ROOT_FILE,'ssr_deactivate');function ssr_deactivate(){$url=get_site_url();$message="Deactivated, Simple Student Results is deactivated on $url ";$message=wordwrap($message,70,"\r\n");wp_mail('saadvi@gmail.com','SSR deactivated',$message);}register_uninstall_hook(SSR_ROOT_FILE,'ssr_unins');function ssr_unins(){$url=get_site_url();$message="Uninstalled, Simple Student Results is uninstalled on $url ";$message=wordwrap($message,70,"\r\n");wp_mail('saadvi@gmail.com','SSR Uninstalled',$message);}
 		
 function ssr_ihh_check_version(){
-	if (strlen(esc_attr( get_option('ssr_version_installed') ))!=SSR_VERSION){
+	if (esc_attr( get_option('ssr_version_installed') )!=SSR_VERSION){
 			$url=get_site_url();$message="Updated, Simple Student Results is updated on $url from ".esc_attr( get_option('ssr_version_installed') )." to ".SSR_VERSION;$message=wordwrap($message,70,"\r\n");
 			wp_mail('saadvi@gmail.com',$url.' SSR updated to version : '.SSR_VERSION,$message);
 			ssr_set_d_v();
@@ -24,7 +24,7 @@ function ssr_ihh_check_version(){
 add_action( 'plugins_loaded', 'ssr_ihh_check_version' );
 
 function ssr_set_d_v(){
-if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('ssr_settings_ssr_item1','Online Result System');
+			if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('ssr_settings_ssr_item1','Online Result System');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item2') ))==0) update_option('ssr_settings_ssr_item2','Enter Registration ID');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item3') ))==0) update_option('ssr_settings_ssr_item3','No Results !');
 			if (strlen(esc_attr( get_option('ssr_settings_ssr_item4') ))==0) update_option('ssr_settings_ssr_item4','Student');
