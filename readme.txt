@@ -1,14 +1,14 @@
-﻿=== Simple Student Result ===
+﻿=== Student Result or Employee Database ===
 Contributors: saadamin
 Donate link: http://bit.ly/donatebypaypal
 Plugin URI: http://saadamin.info/portfolio/ssr
-Tags: student, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
+Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
 Tested up to: 4.1
 Stable tag: 4.1
 License: licensed under “GPLv2 or later”
 
-A simple student result plugin. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
+A simple student result or employee database system , can be used for multiple database entry management system. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
 
 == Description ==
 
