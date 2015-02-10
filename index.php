@@ -23,6 +23,7 @@ define( 'SSR_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 		include SSR_ROOT_PATH.'/activation.php';
 		include SSR_ROOT_PATH.'/menus.php';
 		include SSR_ROOT_PATH.'/functions.php';
+		include SSR_ROOT_PATH.'/uninstall.php';
 	}
 	include SSR_ROOT_PATH.'/ad_scripts.php';
 	include SSR_ROOT_PATH.'/views/ssr_shortcode.php';
