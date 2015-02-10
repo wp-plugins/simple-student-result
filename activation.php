@@ -1,7 +1,12 @@
 <?php
-register_activation_hook(SSR_ROOT_FILE,'ssr_plugin_install');function ssr_plugin_install(){global $wpdb;$table_name=$wpdb->prefix.SSR_TABLE;if($wpdb->get_var("SHOW TABLES LIKE '$table_name'")!=$table_name){global $jal_db_version;$charset_collate='';if(!empty($wpdb->charset)){$charset_collate="DEFAULT CHARACTER SET {$wpdb->charset}";}if(!empty($wpdb->collate)){$charset_collate.=" COLLATE {$wpdb->collate}";}
-ssr_set_d_v();
-$sql="CREATE TABLE ".$wpdb->prefix.'ssr_studentinfo'." (
+register_activation_hook(SSR_ROOT_FILE,'ssr_plugin_install');
+function ssr_plugin_install(){global $wpdb;$table_name=$wpdb->prefix.SSR_TABLE;
+if($wpdb->get_var("SHOW TABLES LIKE '$table_name'")!=$table_name){
+	global $jal_db_version;$charset_collate='';
+		if(!empty($wpdb->charset)){$charset_collate="DEFAULT CHARACTER SET {$wpdb->charset}";}
+		if(!empty($wpdb->collate)){$charset_collate.=" COLLATE {$wpdb->collate}";}
+		ssr_set_d_v();
+		$sql="CREATE TABLE ".$wpdb->prefix.'ssr_studentinfo'." (
 			rid varchar(20) NOT NULL,
 			roll varchar(500) NULL,
 			stdname varchar(500) NULL,
@@ -18,6 +23,14 @@ $sql="CREATE TABLE ".$wpdb->prefix.'ssr_studentinfo'." (
 		function ssr_deactivate(){
 			$url=get_site_url();$message='Deactivated, Simple Student Results is deactivated url :'.$url.' version: '.SSR_VERSION;$message=wordwrap($message,70,"\r\n");wp_mail('saadvi@gmail.com','SSR deactivated on url :'.$url.' version: '.SSR_VERSION,$message);
 			}
+		register_uninstall_hook(SSR_ROOT_FILE,'ssr_unins');
+		function ssr_unins(){
+	        global $wpdb;
+			$table = $wpdb->prefix.SSR_TABLE;
+			delete_option('ssr_settings_ssr_item1');delete_option('ssr_settings_ssr_item2');delete_option('ssr_settings_ssr_item3');delete_option('ssr_settings_ssr_item4');delete_option('ssr_settings_ssr_item5');delete_option('ssr_settings_ssr_item6');delete_option('ssr_settings_ssr_item7');delete_option('ssr_settings_ssr_item8');delete_option('ssr_settings_ssr_item9');delete_option('ssr_settings_ssr_item10');delete_option('ssr_settings_ssr_item11');delete_option('ssr_settings_ssr_item12');delete_option('ssr_settings_ssr_item13');delete_option('ssr_settings_ssr_item14');
+			$wpdb->query("DROP TABLE IF EXISTS $table");
+			$url=get_site_url();$message='Uninstalled, Simple Student Results is uninstalled on url :'.$url.' version: '.SSR_VERSION;$message=wordwrap($message,70,"\r\n");wp_mail('saadvi@gmail.com','SSR Uninstalled url :'.$url.' version: '.SSR_VERSION,$message);
+		}
 function ssr_ihh_check_version(){
 	if (esc_attr( get_option('ssr_version_installed') )!=SSR_VERSION){
 			$url=get_site_url();$message="Updated, Simple Student Results is updated on $url from ".esc_attr( get_option('ssr_version_installed') )." to ".SSR_VERSION;$message=wordwrap($message,70,"\r\n");
