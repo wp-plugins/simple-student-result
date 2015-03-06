@@ -4,7 +4,7 @@ Plugin Name: Student Result or Employee Database
 Plugin URI: http://saadamin.info/portfolio/ssr
 Description: Ajax supported simple student result input and display. And Employee database system ,  apply [ssr_results] shortcode in a post/page for show results  , <a href="http://saadamin.info/portfolio/ssr" target="_blank">Click here for demo</a>
 Author: Saad Amin
-Version: 1.3.8
+Version: 1.3.7
 Author URI: http://www.saadamin.info
 License: GPL2
 */
