@@ -55,13 +55,13 @@ global $wpdb;
     if (isset($_POST['rid'])) {
 		$wpdb->delete( $wpdb->prefix.SSR_TABLE, array( 'rid' => $_POST['rid']) );
 		$tf='Please fill out this field.';
-		if ($_POST['stpy']==$tf) $_POST['stpy']='';if ($_POST['stcgpa']==$tf) $_POST['stcgpa']='';if ($_POST['stsub']==$tf) $_POST['stsub']='';
+		if ($_POST['stpy']==$tf) $_POST['stpy']='';if ($_POST['stcgpa']==$tf) $_POST['stcgpa']='';if ($_POST['stsub']==$tf) $_POST['stsub']='';if ($_POST['stpy2']==$tf) $_POST['stpy2']='';if ($_POST['stpy3']==$tf) $_POST['stpy3']='';if ($_POST['stpy4']==$tf) $_POST['stpy4']='';if ($_POST['stpy5']==$tf) $_POST['stpy5']='';if ($_POST['stpy6']==$tf) $_POST['stpy6']='';if ($_POST['stpy7']==$tf) $_POST['stpy7']='';
 		$wpdb->query( $wpdb->prepare( 
 							"INSERT INTO ".$wpdb->prefix.SSR_TABLE."
-								( rid, roll, stdname, fathersname, pyear, cgpa, subject, image  )
-								VALUES ( %d, %s, %s, %s, %s, %s, %s, %s )", 
+								( rid, roll, stdname, fathersname, pyear, cgpa, subject, dob, gender, address, mnam, c1, c2, image  )
+								VALUES ( %d, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )", 
 							array(
-							$_POST['rid'],$_POST['rn'],$_POST['stn'],$_POST['stfn'],$_POST['stpy'],$_POST['stcgpa'], $_POST['stsub'] , $_POST['upload_image']
+							$_POST['rid'],$_POST['rn'],$_POST['stn'],$_POST['stfn'],$_POST['stpy'],$_POST['stcgpa'], $_POST['stsub'] , $_POST['stpy2'] , $_POST['stpy3'] , $_POST['stpy4'] , $_POST['stpy5'] , $_POST['stpy6'] , $_POST['stpy7'] , $_POST['upload_image']
 							) 
 		) );
 

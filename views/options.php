@@ -98,6 +98,42 @@
 		</td>
         </tr>
         <tr valign="top">
+        <th scope="row">8th Field</th>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item16" name="ssr_settings_ssr_item16" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item16') ); ?>" />
+		<input type="checkbox" name="ssr_item8" id="ssr_item8" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item8') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item8" class="css-label">Required</label>
+		</td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">9th Field</th>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item17" name="ssr_settings_ssr_item17" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item17') ); ?>" />
+		<input type="checkbox" name="ssr_item9" id="ssr_item9" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item9') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item9" class="css-label">Required</label>
+		</td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">10th Field</th>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item18" name="ssr_settings_ssr_item18" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item18') ); ?>" />
+		<input type="checkbox" name="ssr_item10" id="ssr_item10" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item10') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item10" class="css-label">Required</label>
+		</td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">11th Field</th>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item19" name="ssr_settings_ssr_item19" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item19') ); ?>" />
+		<input type="checkbox" name="ssr_item11" id="ssr_item11" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item11') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item11" class="css-label">Required</label>
+		</td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">12th Field</th>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item20" name="ssr_settings_ssr_item20" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item20') ); ?>" />
+		<input type="checkbox" name="ssr_item12" id="ssr_item12" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item12') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item12" class="css-label">Required</label>
+		</td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">13th Field</th>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item21" name="ssr_settings_ssr_item21" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item21') ); ?>" />
+		<input type="checkbox" name="ssr_item13" id="ssr_item13" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item13') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item13" class="css-label">Required</label>
+		</td>
+        </tr>
+        <tr valign="top">
         <th scope="row"></th>
         <td><button type="button" id="ssr_save_btn">Save</button></td>
         </tr>
