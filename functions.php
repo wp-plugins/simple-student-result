@@ -19,6 +19,12 @@ global $wpdb;
 	$data=$data.'pYear:XS'.$results->pyear;
 	$data=$data.'sCGPA:XS'.$results->cgpa;
 	$data=$data.'sSjct:XS'.$results->subject;
+	$data=$data.'stdob:XS'.$results->dob;
+	$data=$data.'stgen:XS'.$results->gender;
+	$data=$data.'stadd:XS'.$results->address;
+	$data=$data.'stmna:XS'.$results->mnam;
+	$data=$data.'stmc1:XS'.$results->c1;
+	$data=$data.'stmc2:XS'.$results->c2;
 	$data=$data.'stIme:XS'.$results->image;
 	echo $data;
 	unset($data);
@@ -155,6 +161,60 @@ function ssr_fn_only_view_st_submit15() {
 	echo $_POST['s'];
 }
 
+add_action( 'ssr_settings_ssr_item16', 'ssr_fn_only_view_st_submit16' );
+add_action( 'wp_ajax_ssr_view_st_submit16', 'ssr_fn_only_view_st_submit16' );
+function ssr_fn_only_view_st_submit16() {
+    if (isset($_POST['s']) && strlen($_POST['s'])>0 ) {
+		update_option('ssr_settings_ssr_item16', $_POST['s']);
+    }
+	echo $_POST['s'];
+}
+
+add_action( 'ssr_settings_ssr_item17', 'ssr_fn_only_view_st_submit17' );
+add_action( 'wp_ajax_ssr_view_st_submit17', 'ssr_fn_only_view_st_submit17' );
+function ssr_fn_only_view_st_submit17() {
+    if (isset($_POST['s']) && strlen($_POST['s'])>0 ) {
+		update_option('ssr_settings_ssr_item17', $_POST['s']);
+    }
+	echo $_POST['s'];
+}
+
+add_action( 'ssr_settings_ssr_item18', 'ssr_fn_only_view_st_submit18' );
+add_action( 'wp_ajax_ssr_view_st_submit18', 'ssr_fn_only_view_st_submit18' );
+function ssr_fn_only_view_st_submit18() {
+    if (isset($_POST['s']) && strlen($_POST['s'])>0 ) {
+		update_option('ssr_settings_ssr_item18', $_POST['s']);
+    }
+	echo $_POST['s'];
+}
+
+add_action( 'ssr_settings_ssr_item19', 'ssr_fn_only_view_st_submit19' );
+add_action( 'wp_ajax_ssr_view_st_submit19', 'ssr_fn_only_view_st_submit19' );
+function ssr_fn_only_view_st_submit19() {
+    if (isset($_POST['s']) && strlen($_POST['s'])>0 ) {
+		update_option('ssr_settings_ssr_item19', $_POST['s']);
+    }
+	echo $_POST['s'];
+}
+
+add_action( 'ssr_settings_ssr_item20', 'ssr_fn_only_view_st_submit20' );
+add_action( 'wp_ajax_ssr_view_st_submit20', 'ssr_fn_only_view_st_submit20' );
+function ssr_fn_only_view_st_submit20() {
+    if (isset($_POST['s']) && strlen($_POST['s'])>0 ) {
+		update_option('ssr_settings_ssr_item20', $_POST['s']);
+    }
+	echo $_POST['s'];
+}
+
+add_action( 'ssr_settings_ssr_item21', 'ssr_fn_only_view_st_submit21' );
+add_action( 'wp_ajax_ssr_view_st_submit21', 'ssr_fn_only_view_st_submit21' );
+function ssr_fn_only_view_st_submit21() {
+    if (isset($_POST['s']) && strlen($_POST['s'])>0 ) {
+		update_option('ssr_settings_ssr_item21', $_POST['s']);
+    }
+	echo $_POST['s'];
+}
+
 
 
 //Required Fields
@@ -198,6 +258,48 @@ add_action( 'wp_ajax_ssr_view_st_ssr_item7', 'ssr_fn_only_view_st_checkedssr_ite
 function ssr_fn_only_view_st_checkedssr_item7() {
     if (isset($_POST['s']) ) {
 	update_option('checkedssr_item7', $_POST['s']);
+    }
+}
+add_action( 'wp_ajax_nopriv_ssr_view_st_ssr_item8', 'ssr_fn_only_view_st_checkedssr_item8' );
+add_action( 'wp_ajax_ssr_view_st_ssr_item8', 'ssr_fn_only_view_st_checkedssr_item8' );
+function ssr_fn_only_view_st_checkedssr_item8() {
+    if (isset($_POST['s']) ) {
+	update_option('checkedssr_item8', $_POST['s']);
+    }
+}
+add_action( 'wp_ajax_nopriv_ssr_view_st_ssr_item9', 'ssr_fn_only_view_st_checkedssr_item9' );
+add_action( 'wp_ajax_ssr_view_st_ssr_item9', 'ssr_fn_only_view_st_checkedssr_item9' );
+function ssr_fn_only_view_st_checkedssr_item9() {
+    if (isset($_POST['s']) ) {
+	update_option('checkedssr_item9', $_POST['s']);
+    }
+}
+add_action( 'wp_ajax_nopriv_ssr_view_st_ssr_item10', 'ssr_fn_only_view_st_checkedssr_item10' );
+add_action( 'wp_ajax_ssr_view_st_ssr_item10', 'ssr_fn_only_view_st_checkedssr_item10' );
+function ssr_fn_only_view_st_checkedssr_item10() {
+    if (isset($_POST['s']) ) {
+	update_option('checkedssr_item10', $_POST['s']);
+    }
+}
+add_action( 'wp_ajax_nopriv_ssr_view_st_ssr_item11', 'ssr_fn_only_view_st_checkedssr_item11' );
+add_action( 'wp_ajax_ssr_view_st_ssr_item11', 'ssr_fn_only_view_st_checkedssr_item11' );
+function ssr_fn_only_view_st_checkedssr_item11() {
+    if (isset($_POST['s']) ) {
+	update_option('checkedssr_item11', $_POST['s']);
+    }
+}
+add_action( 'wp_ajax_nopriv_ssr_view_st_ssr_item12', 'ssr_fn_only_view_st_checkedssr_item12' );
+add_action( 'wp_ajax_ssr_view_st_ssr_item12', 'ssr_fn_only_view_st_checkedssr_item12' );
+function ssr_fn_only_view_st_checkedssr_item12() {
+    if (isset($_POST['s']) ) {
+	update_option('checkedssr_item12', $_POST['s']);
+    }
+}
+add_action( 'wp_ajax_nopriv_ssr_view_st_ssr_item13', 'ssr_fn_only_view_st_checkedssr_item13' );
+add_action( 'wp_ajax_ssr_view_st_ssr_item13', 'ssr_fn_only_view_st_checkedssr_item13' );
+function ssr_fn_only_view_st_checkedssr_item13() {
+    if (isset($_POST['s']) ) {
+	update_option('checkedssr_item13', $_POST['s']);
     }
 }
 ?>

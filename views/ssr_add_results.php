@@ -49,6 +49,15 @@ echo '</div>';
 	?>
 
 	</select></div>
+	<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item16') ); ?> :</span><input type="text" id="stpy2" name="stnsx2" class="std_input std_input_item" onfocus="if(this.value=='Please fill out this field.') {this.value='';jQuery('#stpy2').removeClass('needsfilled');}" maxlength="50" placeholder="Please fill out this field."></div>
+	<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item17') ); ?> :</span><input type="text" id="stpy3" name="stnsx3" class="std_input std_input_item" onfocus="if(this.value=='Please fill out this field.') {this.value='';jQuery('#stpy3').removeClass('needsfilled');}" maxlength="10" placeholder="Please fill out this field."></div>
+	<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item18') ); ?> :</span><input type="text" id="stpy4" name="stnsx4" class="std_input std_input_item" onfocus="if(this.value=='Please fill out this field.') {this.value='';jQuery('#stpy4').removeClass('needsfilled');}" maxlength="500" placeholder="Please fill out this field."></div>
+	<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item19') ); ?> :</span><input type="text" id="stpy5" name="stnsx5" class="std_input std_input_item" onfocus="if(this.value=='Please fill out this field.') {this.value='';jQuery('#stpy5').removeClass('needsfilled');}" maxlength="100" placeholder="Please fill out this field."></div>
+	<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item20') ); ?> :</span><input type="text" id="stpy6" name="stnsx6" class="std_input std_input_item" onfocus="if(this.value=='Please fill out this field.') {this.value='';jQuery('#stpy6').removeClass('needsfilled');}" maxlength="500" placeholder="Please fill out this field."></div>
+	<div class="sep"><span class="std_title"><?php echo esc_attr( get_option('ssr_settings_ssr_item21') ); ?> :</span><input type="text" id="stpy7" name="stnsx7" class="std_input std_input_item" onfocus="if(this.value=='Please fill out this field.') {this.value='';jQuery('#stpy7').removeClass('needsfilled');}" maxlength="500" placeholder="Please fill out this field."></div>
+	
+	
+	
 	<div class="seps">
 	<label for="upload_image" style="width: 100%">
 		<input id="upload_image" class="std_input std_input_item" type="text" size="36" name="ad_image" value="" readonly="readonly" />
@@ -98,7 +107,7 @@ jQuery(document).ready(function(e) {
         }
         e("#st_img").attr("src", "")
     }
-    required = ["rid" <?php if (esc_attr( get_option('checkedssr_item2') )>0) {echo ',"rn"';} if (esc_attr( get_option('checkedssr_item3') )>0) {echo ',"stn"';} if (esc_attr( get_option('checkedssr_item4') )>0) {echo ',"stfn"';} if (esc_attr( get_option('checkedssr_item5') )>0) {echo ',"stpy"';} if (esc_attr( get_option('checkedssr_item6') )>0) {echo ',"stcgpa"';} if (esc_attr( get_option('checkedssr_item7') )>0) {echo ',"stsub"';} ?>], emptyerror = "Please fill out this field.";
+    required = ["rid" <?php if (esc_attr( get_option('checkedssr_item2') )>0) {echo ',"rn"';} if (esc_attr( get_option('checkedssr_item3') )>0) {echo ',"stn"';} if (esc_attr( get_option('checkedssr_item4') )>0) {echo ',"stfn"';} if (esc_attr( get_option('checkedssr_item5') )>0) {echo ',"stpy"';} if (esc_attr( get_option('checkedssr_item6') )>0) {echo ',"stcgpa"';} if (esc_attr( get_option('checkedssr_item7') )>0) {echo ',"stsub"';} if (esc_attr( get_option('checkedssr_item8') )>0) {echo ',"stpy2"';} if (esc_attr( get_option('checkedssr_item9') )>0) {echo ',"stpy3"';} if (esc_attr( get_option('checkedssr_item10') )>0) {echo ',"stpy4"';} if (esc_attr( get_option('checkedssr_item11') )>0) {echo ',"stpy5"';} if (esc_attr( get_option('checkedssr_item12') )>0) {echo ',"stpy6"';} if (esc_attr( get_option('checkedssr_item13') )>0) {echo ',"stpy7"';} ?>], emptyerror = "Please fill out this field.";
     var u;
     e("#upload_image_button").click(function(s) {
         return s.preventDefault(), u ? void u.open() : (u = wp.media.frames.file_frame = wp.media({
@@ -130,6 +139,12 @@ jQuery(document).ready(function(e) {
             stpy: jQuery("#stpy").val(),
             stcgpa: jQuery("#stcgpa").val(),
             stsub: jQuery("#stsub").val(),
+            stpy2: jQuery("#stpy2").val(),
+            stpy3: jQuery("#stpy3").val(),
+            stpy4: jQuery("#stpy4").val(),
+            stpy5: jQuery("#stpy5").val(),
+            stpy6: jQuery("#stpy6").val(),
+            stpy7: jQuery("#stpy7").val(),
             upload_image: jQuery("#upload_image").val()
         }, function(s) {
             t(), jQuery("#btn_delete").css({
@@ -162,8 +177,20 @@ jQuery(document).ready(function(e) {
 					e("#stpy").val(s.substring(u + 8, t));
 					var u = s.search("sSjct:XS");
 					e("#stcgpa").val(s.substring(t + 8, u));
-					var t = s.search("stIme:XS");
+					var t = s.search("stdob:XS");
 					e("#stsub").val(s.substring(u + 8, t));
+					var u = s.search("stgen:XS");
+					e("#stpy2").val(s.substring(t + 8, u));
+					var t = s.search("stadd:XS");
+					e("#stpy3").val(s.substring(u + 8, t));
+					var u = s.search("stmna:XS");
+					e("#stpy4").val(s.substring(t + 8, u));
+					var t = s.search("stmc1:XS");
+					e("#stpy5").val(s.substring(u + 8, t));
+					var u = s.search("stmc2:XS");
+					e("#stpy6").val(s.substring(t + 8, u));
+					var t = s.search("stIme:XS");
+					e("#stpy7").val(s.substring(u + 8, t));
 					var u = s.length;
 					e("#upload_image").val(s.substring(t + 8, u)), e("#st_img").attr("src", s.substring(t + 8, u));
 					jQuery("#btn_delete").css({opacity: 1,cursor: "pointer"});
