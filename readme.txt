@@ -4,8 +4,8 @@ Donate link: http://bit.ly/donatebypaypal
 Plugin URI: http://saadamin.info/portfolio/ssr
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
-Tested up to: 4.1.1
-Stable tag: 4.1.1
+Tested up to: 4.2
+Stable tag: 4.2
 License: licensed under “GPLv2 or later”
 
 A simple student result or employee database system , can be used for multiple database entry management system. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
@@ -75,6 +75,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.4.2 Database Bug Fixed, Passing Year field will allow text up to 500 length.
  1.4.1 Front End CSS Bug Fixed.
  1.4.0 Minor Bug Fixed.
  1.3.9 Added 6 new fields on some user request. Only the fields has data will visible in front end.
