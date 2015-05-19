@@ -1,7 +1,7 @@
 ﻿=== Student Result or Employee Database ===
 Contributors: saadamin
 Donate link: http://bit.ly/donatebypaypal
-Plugin URI: http://saadamin.info/portfolio/ssr
+Plugin URI: http://ssr.saadamin.info
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
 Tested up to: 4.2
@@ -18,7 +18,7 @@ Ajax supported student result system . Result can be added and show to user by s
 		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 = Docs & Support =
 
-You can find tutorial with screenshot in http://saadamin.info/portfolio/ssr
+You can find tutorial with video tutorial in http://ssr.saadamin.info
 
 = Simple Student Result Needs Your Support =
 
