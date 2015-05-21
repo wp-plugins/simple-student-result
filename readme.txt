@@ -30,7 +30,7 @@ It is hard to continue development and support for this free plugin without cont
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
 You will find 'Students Results' menu in your WordPress admin panel.
-[youtube https://www.youtube.com/embed/C8QjxJUKRMU]
+http://www.youtube.com/watch?v=7EiKx_WSesk
 <p><b>Usage:</b> View result by <b>shortcode [sms_result]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 		
