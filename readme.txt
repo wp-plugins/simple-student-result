@@ -14,7 +14,7 @@ A simple student result or employee database system , can be used for multiple d
 
 Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
 
-<p><b>Usage:</b> View result by <b>shortcode [sms_result]</b> (in post editor) or 
+<p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 = Docs & Support =
 
