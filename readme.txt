@@ -5,7 +5,7 @@ Plugin URI: http://ssr.saadamin.info
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 4.2
+Stable tag: 4.2.2
 License: licensed under “GPLv2 or later”
 
 A simple student result or employee database system , can be used for multiple database entry management system. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
@@ -15,13 +15,13 @@ A simple student result or employee database system , can be used for multiple d
 Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
 
 <br>in this tutorial you will see how to install the plugin , use short code and insert result.<br>
-[youtube https://www.youtube.com/embed/C8QjxJUKRMU]
+[youtube https://www.youtube.com/watch?v=C8QjxJUKRMU]
 
 <br>in this tutorial you will see how to edit records in ssr.<br>
-[youtube https://www.youtube.com/embed/uJxLTSmGHkk]
+[youtube https://www.youtube.com/watch?v=uJxLTSmGHkk]
 
 <br>in this tutorial you will see how to delete a record<br>
-[youtube https://www.youtube.com/embed/NoVvsJoKWPU]
+[youtube https://www.youtube.com/watch?v=NoVvsJoKWPU]
 
 <p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[sms_results]' );</p>
@@ -54,7 +54,7 @@ You will find 'Students Results' menu in your WordPress icon in the left hand me
 <p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor).  echo do_shortcode( '[gallery]' ); </p>
 		
-For basic usage, you can also have a look at the [plugin homepage](http://saadamin.info/portfolio/ssr).
+For basic usage, you can also have a look at the [plugin homepage](http://ssr.saadamin.info).
 
 == Screenshots ==
 <ol class="screenshots">
