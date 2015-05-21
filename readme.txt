@@ -51,8 +51,8 @@ Simple instructions, instant Live Chat!
 
 You will find 'Students Results' menu in your WordPress icon in the left hand menu in admin panel.
 
-<p><b>Usage:</b> View result by <b>shortcode [sms_result]</b> (in post editor) or 
-		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
+<p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
+		<br>Use shortcode in a PHP file (outside the post editor).  echo do_shortcode( '[gallery]' ); </p>
 		
 For basic usage, you can also have a look at the [plugin homepage](http://saadamin.info/portfolio/ssr).
 
