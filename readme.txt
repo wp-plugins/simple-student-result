@@ -4,7 +4,7 @@ Donate link: http://bit.ly/donatebypaypal
 Plugin URI: http://ssr.saadamin.info
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
-Tested up to: 4.2
+Tested up to: 4.2.2
 Stable tag: 4.2
 License: licensed under “GPLv2 or later”
 
@@ -36,9 +36,20 @@ It is hard to continue development and support for this free plugin without cont
 == Installation ==
 
 1. Upload the entire `Simple-Student-Result` folder to the `/wp-content/plugins/` directory.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
 
-You will find 'Students Results' menu in your WordPress admin panel.
+or
+
+Simple instructions, instant Live Chat!
+
+- Log on to your wp-admin
+- Click "Plugins", then "Add New"
+- Type in „Simple-Student-Result” and click "Search Plugins"
+- Download and install the Plugin
+- Click on the "Activate Plugin" button
+- Scroll down to the ”Student Results” 
+
+You will find 'Students Results' menu in your WordPress icon in the left hand menu in admin panel.
 
 <p><b>Usage:</b> View result by <b>shortcode [sms_result]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
