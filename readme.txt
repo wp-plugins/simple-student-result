@@ -11,11 +11,11 @@ License: licensed under “GPLv2 or later”
 A simple student result or employee database system , can be used for multiple database entry management system. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
 
 == Description ==
+Livechat by CustomerICare. The Wordpress Widget is a free application to chat with visitors on your website.
+The plugin adds a beautiful live chat box that allows text, audio and video, sending files plus web analytics.
 
-Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
-[youtube https://www.youtube.com/embed/C8QjxJUKRMU]
-<p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
-		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
+[youtube https://www.youtube.com/watch?v=xNxQAWJy2-w]
+
 = Docs & Support =
 
 You can find video tutorial in http://ssr.saadamin.info
