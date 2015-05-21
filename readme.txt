@@ -13,7 +13,7 @@ A simple student result or employee database system , can be used for multiple d
 == Description ==
 
 Ajax supported student result system . Result can be added and show to user by shortcode.Simple and easy to use. You can easily add , update and delete student result with image.
-
+[youtube https://www.youtube.com/embed/C8QjxJUKRMU]
 <p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 = Docs & Support =
@@ -30,7 +30,16 @@ It is hard to continue development and support for this free plugin without cont
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
 You will find 'Students Results' menu in your WordPress admin panel.
-http://www.youtube.com/watch?v=7EiKx_WSesk
+<div class="video">
+in this tutorial you will see how to install the plugin , use short code and insert result.
+<iframe src="https://www.youtube.com/embed/C8QjxJUKRMU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+in this tutorial you will see how to edit records in ssr.
+<iframe src="https://www.youtube.com/embed/uJxLTSmGHkk" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+in this tutorial you will see how to delete a record
+<iframe src="https://www.youtube.com/embed/NoVvsJoKWPU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</div>
 <p><b>Usage:</b> View result by <b>shortcode [sms_result]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). <?php echo do_shortcode( '[gallery]' ); ?></p>
 		
