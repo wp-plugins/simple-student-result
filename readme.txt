@@ -8,7 +8,7 @@ Tested up to: 4.2.2
 Stable tag: 4.2.2
 License: licensed under “GPLv2 or later”
 
-A simple student result or employee database system , can be used for multiple database entry management system. Simple but flexible. where you can add student results and show them on your site. Fully ajax supported.
+A simple student result or employee database system , can be used for multiple database entry management system. Fully ajax supported.
 
 == Description ==
 
