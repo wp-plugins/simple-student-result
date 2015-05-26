@@ -22,7 +22,13 @@ Ajax supported student result system . Result can be added and show to user by s
 
 <br>in this tutorial you will see how to delete a record<br>
 [youtube https://www.youtube.com/watch?v=NoVvsJoKWPU]
-
+<br>
+do you know you can use the plugin for employee database or client database. please see this tutorial to know how you can do it.
+[youtube https://www.youtube.com/watch?v=ntzb7njqd_4]
+<br>
+This is a premium feature , for premium version of the plugin please contact saadvi@gmail.com. you want to import records from other plugin/mysql database , lets see how you can do it
+[youtube https://www.youtube.com/watch?v=1GfMZhnyCqw]
+<br>
 <p><b>Usage:</b> View result by <b>shortcode [sms_results]</b> (in post editor) or 
 		<br>Use shortcode in a PHP file (outside the post editor). echo do_shortcode( '[sms_results]' );</p>
 = Docs & Support =
@@ -95,6 +101,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.4.3 Database Bug Fixed.
  1.4.2 Database Bug Fixed, Passing Year field will allow text up to 500 length.
  1.4.1 Front End CSS Bug Fixed.
  1.4.0 Minor Bug Fixed.
