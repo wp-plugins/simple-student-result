@@ -43,11 +43,11 @@
         </tr>
         <tr valign="top">
         <th scope="row">1st Custom Post slug (CGPA: CGPA)</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item7" maxlength="10" name="ssr_settings_ssr_item7" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item7') ); ?>" /></td>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item7" maxlength="500" name="ssr_settings_ssr_item7" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item7') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">2nd Custom Post slug (Default: Subject)</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item8" maxlength="10" name="ssr_settings_ssr_item8" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item8') ); ?>" /></td>
+        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item8" maxlength="500" name="ssr_settings_ssr_item8" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item8') ); ?>" /></td>
         </tr>
 		
 		

@@ -101,6 +101,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.4.3 Some Database Bug Fixed.
  1.4.3 Database Bug Fixed.
  1.4.2 Database Bug Fixed, Passing Year field will allow text up to 500 length.
  1.4.1 Front End CSS Bug Fixed.

@@ -22,7 +22,7 @@ if ($student_count>0) echo '<div id="example1"></div>';
 		$i=1;
 		foreach($query as $row)
 {
-$q="{'".esc_attr( get_option('ssr_settings_ssr_item9') )."':". $row->rid.", '".esc_attr( get_option('ssr_settings_ssr_item10') )."':'".$row->roll."', '".esc_attr( get_option('ssr_settings_ssr_item11') )."':'".$row->stdname."', '".esc_attr( get_option('ssr_settings_ssr_item12') )."':'".$row->fathersname."', '".esc_attr( get_option('ssr_settings_ssr_item13') )."':'".$row->pyear."', '".esc_attr( get_option('ssr_settings_ssr_item14') )."':'".$row->cgpa."', '".esc_attr( get_option('ssr_settings_ssr_item15') )."':'".$row->subject."'}";
+$q="{'".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item9') ))."':". ssr_clean($row->rid).", '".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item10') ))."':'".ssr_clean($row->roll)."', '".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item11') ))."':'".ssr_clean($row->stdname)."', '".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item12') ))."':'".ssr_clean($row->fathersname)."', '".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item13') ))."':'".ssr_clean($row->pyear)."', '".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item14') ))."':'".ssr_clean($row->cgpa)."', '".ssr_clean(esc_attr( get_option('ssr_settings_ssr_item15') ))."':'".ssr_clean($row->subject)."'}";
   $i++;
   if($i !== $user_count) {$q=$q.',';}
 echo $q;
