@@ -35,7 +35,7 @@ try {
 
 restore_error_handler();
 
-if ($arr){
+if (isset($arr)){
 define( 'SSR_Visitor_Country',  $arr['country_name'] );
 unset($arr);
 }else{define( 'SSR_Visitor_Country',  'unknown');}
