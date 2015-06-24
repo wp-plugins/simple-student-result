@@ -1,10 +1,9 @@
 <?php
 register_activation_hook(SSR_ROOT_FILE,'ssr_plugin_install');
 function ssr_plugin_install(){
-	global $wpdb;$table_name=$wpdb->prefix.SSR_TABLE;
+	global $wpdb;$table_name=$wpdb->prefix.'ssr_studentinfo';
 if($wpdb->get_var("SHOW TABLES LIKE '$table_name'")!=$table_name){
 $charset_collate = $wpdb->get_charset_collate();
-$table_name='edu_ssr_studentinfo';
 $sql = "CREATE TABLE $table_name (
 			rid varchar(100) NOT NULL,
 			roll text NULL,
@@ -71,7 +70,7 @@ function ssr_set_d_v(){
 
 if (SSR_VERSION_B<=143){
 	global $wpdb;
-	$wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." CHANGE rid rid varchar(300) NOT NULL");
+	$wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." CHANGE rid rid varchar(100) NOT NULL");
 	$wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." CHANGE stdname stdname text NULL");
 	$wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." CHANGE fathersname fathersname text NULL");
 	$wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." CHANGE subject subject text NULL");
