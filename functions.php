@@ -346,4 +346,9 @@ function ssr_fn_only_view_st_checkedssr_item13() {
 	update_option('checkedssr_item13', $_POST['s']);
     }
 }
+function ssr_clean($string) {
+   $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+
+   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+}
 ?>
