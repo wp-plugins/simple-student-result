@@ -13,7 +13,7 @@ global $wpdb;
 		$wpdb->query( $wpdb->prepare( 
 							"INSERT INTO ".$wpdb->prefix.SSR_TABLE."
 								( rid, roll, stdname, fathersname, pyear, cgpa, subject, dob, gender, address, mnam, c1, c2, image  )
-								VALUES ( %d, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )", 
+								VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )", 
 							array(
 							$_POST['rid'],$_POST['rn'],$_POST['stn'],$_POST['stfn'],$_POST['stpy'],$_POST['stcgpa'], $_POST['stsub'] , $_POST['stpy2'] , $_POST['stpy3'] , $_POST['stpy4'] , $_POST['stpy5'] , $_POST['stpy6'] , $_POST['stpy7'] , $_POST['upload_image']
 							) 
@@ -33,10 +33,10 @@ function fn_ssr_del_st_submit() {
 ?><script type="text/javascript">console.log(<?php echo 'Deleted ID : '.$_POST['rid']; ?>);</script><?php
 global $wpdb;
     if (isset($_POST['rid'])) {
-		$student_count =$wpdb->get_var($wpdb->prepare( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE." where rid=%d", $_POST['rid'] ));
+		$student_count =$wpdb->get_var($wpdb->prepare( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE." where rid=%s", $_POST['rid'] ));
     }
 if ($student_count>0){
-$student_count =$wpdb->prepare( "delete from ".$wpdb->prefix.SSR_TABLE." where rid=%d", $_POST['rid'] );
+$student_count =$wpdb->prepare( "delete from ".$wpdb->prefix.SSR_TABLE." where rid=%s", $_POST['rid'] );
 $wpdb->query($student_count);
 $student_count =$wpdb->get_var( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE );
 echo $student_count;
@@ -51,11 +51,11 @@ add_action( 'wp_ajax_ssr_view_st_submit', 'ssr_fn_only_view_st_submit' );
 function ssr_fn_only_view_st_submit() {
 global $wpdb;
     if (isset($_POST['postID']) && strlen($_POST['postID'])>0 ) {
-		$student_count =$wpdb->get_var($wpdb->prepare( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE." where rid=%d", $_POST['postID'] ));
+		$student_count =$wpdb->get_var($wpdb->prepare( "SELECT COUNT(*) FROM ".$wpdb->prefix.SSR_TABLE." where rid=%s", $_POST['postID'] ));
     }
 	if (intval($student_count)>0){
 	unset($student_count);
-	$results = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".$wpdb->prefix.SSR_TABLE." where rid=%d", $_POST['postID']));
+	$results = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".$wpdb->prefix.SSR_TABLE." where rid=%s", $_POST['postID']));
 	$data='RID:XS'.$results->rid;
 	$data=$data.'Rollg:XS'.$results->roll;
 	$data=$data.'Stdge:XS'.$results->stdname;

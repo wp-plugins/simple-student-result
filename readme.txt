@@ -101,6 +101,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.4.9 Now support string as registration id. even starts with 0(zero) or any word.
  1.4.8 Bug in all entries page fixed.
  1.4.7 smart phone responsive Bug Fixed.
  1.4.6 few Bug Fixed.
