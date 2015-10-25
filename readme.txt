@@ -1,11 +1,11 @@
 ﻿=== Student Result or Employee Database ===
 Contributors: saadamin
-Donate link: http://bit.ly/donatebypaypal
+Donate link: http://bit.ly/donatessrnow
 Plugin URI: http://ssr.saadamin.info
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 4.2.2
+Tested up to: 4.3
+Stable tag: 4.3
 License: licensed under “GPLv2 or later”
 
 A simple student result or employee database system , can be used for multiple database entry management system. Fully ajax supported.
@@ -101,6 +101,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.5.0 All entries will now support text reg id.
  1.4.9 Now support string as registration id. even starts with 0(zero) or any word.
  1.4.8 Bug in all entries page fixed.
  1.4.7 smart phone responsive Bug Fixed.
