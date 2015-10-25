@@ -1,6 +1,6 @@
 ﻿=== Student Result or Employee Database ===
 Contributors: saadamin
-Donate link: http://bit.ly/donatessrnow
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X7CDP24CCZYAY
 Plugin URI: http://ssr.saadamin.info
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
