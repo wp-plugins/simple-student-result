@@ -4,8 +4,8 @@ Donate link: http://bit.ly/donatessrnow
 Plugin URI: http://ssr.saadamin.info
 Tags: student, employee, student result, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
 Requires at least: 3.8
-Tested up to: 4.3
-Stable tag: 4.3
+Tested up to: 4.3.1
+Stable tag: 4.3.1
 License: licensed under “GPLv2 or later”
 
 A simple student result or employee database system , can be used for multiple database entry management system. Fully ajax supported.
@@ -23,7 +23,7 @@ Ajax supported student result system . Result can be added and show to user by s
 <br>in this tutorial you will see how to delete a record<br>
 [youtube https://www.youtube.com/watch?v=NoVvsJoKWPU]
 <br>
-do you know you can use the plugin for employee database or client database. please see this tutorial to know how you can do it.
+Do you know you can use the plugin for employee database or client database? please see this tutorial to know how you can do it.
 [youtube https://www.youtube.com/watch?v=ntzb7njqd_4]
 <br>
 This is a premium feature , for premium version of the plugin please contact saadvi@gmail.com. you want to import records from other plugin/mysql database , lets see how you can do it
@@ -101,6 +101,7 @@ question: can I add/edit CGPA?<br>
 ans: Yes , you can, you will find CGPA item wp-admin panel below page.
 
  == Changelog ==
+ 1.5.1 if any entry don't have image , it will not show in front end.
  1.5.0 All entries will now support text reg id.
  1.4.9 Now support string as registration id. even starts with 0(zero) or any word.
  1.4.8 Bug in all entries page fixed.
