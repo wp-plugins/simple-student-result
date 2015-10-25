@@ -28,8 +28,8 @@ add_action('admin_bar_menu', 'ssr_admin_bar', 999 );
 function ssr_admin_bar($wp_admin_bar) {
 	$wp_admin_bar->add_node(array(
 		'id'    => 'ab-ssr-add-new',
-		'title' => 'Student Results',
-		'href'  => admin_url('admin.php?page=Student_Result')
+		'title' => 'Simple Student Results',
+		'href'  => admin_url('admin.php?page=Simple_Student_result')
 	));
 	$wp_admin_bar->add_node(array(
 		'parent' => 'ab-ssr-add-new',
@@ -68,14 +68,14 @@ function ssr_register_custom_menu_page(){
 	// Menu hook
 	global $ssr_hook;
     // Add main page
-	$ssr_hook = add_menu_page( esc_attr( get_option('ssr_settings_ssr_item5') ), esc_attr( get_option('ssr_settings_ssr_item5') ), 'publish_pages', 'Student_Result', 'ssr_router', SSR_plugin_url( 'img/ssr_logo.png'), 6 );
-	add_submenu_page('Student_Result', 'All_Entries', 'All '.esc_attr( get_option('ssr_settings_ssr_item4') ), 'publish_pages', 'ssr_all_entires', 'ssr_router');
-	add_submenu_page('Student_Result', 'Add Student Results', 'Add/Edit '.esc_attr( get_option('ssr_settings_ssr_item4') ), 'publish_pages', 'ssr_add_results', 'ssr_router');
-    add_submenu_page('Student_Result', 'View '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'View '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'publish_pages', 'edit.php?post_type=ssr_cgpa');
-    add_submenu_page('Student_Result', 'Add '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'Add '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'publish_pages', 'post-new.php?post_type=ssr_cgpa');
-    add_submenu_page('Student_Result', 'View '.esc_attr( get_option('ssr_settings_ssr_item8') ), esc_attr( get_option('ssr_settings_ssr_item8') ), 'publish_pages', 'edit.php?post_type=ssr_subjects');
-	add_submenu_page('Student_Result', 'Add '.esc_attr( get_option('ssr_settings_ssr_item8') ), 'Add '.esc_attr( get_option('ssr_settings_ssr_item8') ), 'publish_pages', 'post-new.php?post_type=ssr_subjects');
-	add_submenu_page('Student_Result', 'Settings', 'Settings', 'publish_pages', 'ssr_settings', 'ssr_router');
+	$ssr_hook = add_menu_page( esc_attr( get_option('ssr_settings_ssr_item5') ), esc_attr( get_option('ssr_settings_ssr_item5') ), 'publish_pages', 'Simple_Student_result', 'ssr_router', SSR_plugin_url( 'img/ssr_logo.png'), 6 );
+	add_submenu_page('Simple_Student_result', 'All_Entries', 'All '.esc_attr( get_option('ssr_settings_ssr_item4') ), 'publish_pages', 'ssr_all_entires', 'ssr_router');
+	add_submenu_page('Simple_Student_result', 'Add Student Results', 'Add/Edit '.esc_attr( get_option('ssr_settings_ssr_item4') ), 'publish_pages', 'ssr_add_results', 'ssr_router');
+    add_submenu_page('Simple_Student_result', 'View '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'View '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'publish_pages', 'edit.php?post_type=ssr_cgpa');
+    add_submenu_page('Simple_Student_result', 'Add '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'Add '.esc_attr( get_option('ssr_settings_ssr_item7') ), 'publish_pages', 'post-new.php?post_type=ssr_cgpa');
+    add_submenu_page('Simple_Student_result', 'View '.esc_attr( get_option('ssr_settings_ssr_item8') ), esc_attr( get_option('ssr_settings_ssr_item8') ), 'publish_pages', 'edit.php?post_type=ssr_subjects');
+	add_submenu_page('Simple_Student_result', 'Add '.esc_attr( get_option('ssr_settings_ssr_item8') ), 'Add '.esc_attr( get_option('ssr_settings_ssr_item8') ), 'publish_pages', 'post-new.php?post_type=ssr_subjects');
+	add_submenu_page('Simple_Student_result', 'Settings', 'Settings', 'publish_pages', 'ssr_settings', 'ssr_router');
 	
 		//call register settings function
 		add_action( 'admin_init', 'register_mysettings' );
