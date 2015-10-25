@@ -47,7 +47,7 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p"><b class="ssr_st_b_h">Shortcode : </b> [ssr_results] </p>
 <p class="ssr_p"><b class="ssr_st_b_h">শুধুমাত্র যে user রা এই প্লাগিন এর মাধ্যমে ফলাফল ইনপুট দিতে পারবে :</b>  Author , Administrator , Super Administrator</p>
 <p class="ssr_p">এই প্লাগিনের প্রিমিয়াম ভার্সন ও আছে , যাতে আপনি csv থেকে import করতে পারবেন , ৩ টা ছবি এবং ২৫ টা ফিল্ড (ছবি ছাড়া) সাপোর্ট করে , আছে আরও ফিচার।</p>
-<p class="ssr_p">প্রিমিয়াম ভার্সন এর ডেমো দেখার জন্য ভিসিট করুন <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=Student_Result">http://ssr.saadamin.info/wp-admin/admin.php?page=Student_Result</a></p>
+<p class="ssr_p">প্রিমিয়াম ভার্সন এর ডেমো দেখার জন্য ভিসিট করুন <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=SSR">http://ssr.saadamin.info/wp-admin/admin.php?page=SSR</a></p>
 <p class="ssr_p">user : test</p>
 <p class="ssr_p">pass : test</p>
 <p class="ssr_p">প্লাগিন এ  <b class="ssr_st_b_h">ajax</b> ব্যাবহার করা হয়েছে তাই ফলাফল পাবেন তৎক্ষণাৎ পেজ লোড ছাড়াই.</p>
@@ -61,7 +61,7 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p"><b class="ssr_st_b_h">Shortcode : </b> [ssr_results] </p>
 <p class="ssr_p"><b class="ssr_st_b_h">who can input results :</b>  Author , Administrator , Super Administrator</p>
 <p class="ssr_p">you can have premium version of this plugin , which support 3 images , csv import system, 25 fields (without images) and more features</p>
-<p class="ssr_p">for premium version demo please visit <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=Student_Result">http://ssr.saadamin.info/wp-admin/admin.php?page=Student_Result</a></p>
+<p class="ssr_p">for premium version demo please visit <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=SSR">http://ssr.saadamin.info/wp-admin/admin.php?page=SSR</a></p>
 <p class="ssr_p">user : test</p>
 <p class="ssr_p">pass : test</p>
 <p class="ssr_p">Please contact with me if you need more features <a href="mailto:saadvi@gmail.com">saadvi@gmail.com</a></p>

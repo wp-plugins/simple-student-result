@@ -29,7 +29,7 @@ function ssr_my_admin_scripts() {
 			wp_enqueue_style( 'SSR_zebra_dialog_css', SSR_plugin_url( 'css/zebra_dialog.css' ), false, '1.3.8' );
 			wp_enqueue_style( 'SSR_admin_css', SSR_plugin_url( 'css/admin-style.css' ), false, SSR_VERSION );
 		}
-		if ($_GET['page'] == 'Student_Result') {
+		if ($_GET['page'] == 'SSR') {
 			wp_enqueue_style( 'SSR_viewst_css', SSR_plugin_url( 'css/ssr_viewst.css' ), false, SSR_VERSION );
 		}
 		if ($_GET['page'] == 'ssr_all_entires') {
