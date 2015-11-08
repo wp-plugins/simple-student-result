@@ -11,7 +11,7 @@
 				"std" => "saad"))
 ?>
 <div class="wrap">
-<div class="set_heading"><h2 class="plugin_heading"><?php echo SSR_PLUGIN_NAME; ?> Settings</h2><h5>ver: <?php echo esc_attr( get_option('ssr_version_installed') ) ?></h5></div>
+<div class="set_heading"><h2 class="plugin_heading"><?php echo SSR_PLUGIN_NAME; ?> Settings</h2><h5>ver: <?php echo esc_attr( get_option('SSR_VERSION_P_installed') ) ?></h5></div>
 
 <form method="post" action="options.php" id="myOptionsForm">
     <?php settings_fields( 'ssr_settings_group' ); ?>
@@ -19,121 +19,87 @@
     <table class="form-tables">
         <tr valign="top">
         <th scope="row">Search Result heading</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item1" name="ssr_settings_ssr_item1" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item1') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema1" name="ssr_settings_ssr_item1" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item1') ); ?>" /></td>
         </tr>
         <th scope="row">Search box Text</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item2" name="ssr_settings_ssr_item2" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item2') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema2" name="ssr_settings_ssr_item2" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item2') ); ?>" /></td>
         </tr>
          
         <tr valign="top">
         <th scope="row">No Result Text</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item3" name="ssr_settings_ssr_item3" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item3') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema3" name="ssr_settings_ssr_item3" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item3') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">Plugin Slug (Example: Student / Employee)</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item4" name="ssr_settings_ssr_item4" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item4') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema4" name="ssr_settings_ssr_item4" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item4') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">Menu Page Name</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item5" name="ssr_settings_ssr_item5" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item5') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema5" name="ssr_settings_ssr_item5" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item5') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">Add Record Page Name</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item6" name="ssr_settings_ssr_item6" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item6') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema6" name="ssr_settings_ssr_item6" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item6') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">1st Custom Post slug (CGPA: CGPA)</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item7" maxlength="500" name="ssr_settings_ssr_item7" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item7') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema7" maxlength="500" name="ssr_settings_ssr_item7" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item7') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">2nd Custom Post slug (Default: Subject)</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item8" maxlength="500" name="ssr_settings_ssr_item8" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item8') ); ?>" /></td>
-        </tr>
-		
-		
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema8" maxlength="500" name="ssr_settings_ssr_item8" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item8') ); ?>" /></td>
+        </tr>		
 		<tr valign="top">
         <th scope="row"><h1 class="ssr_setting_title">Field Name on Database</h1></th>
         </tr>
+	<?php
+	$i=1;$j=9;
+	while($i <= 25) {
+		echo '<tr valign="top"><th scope="row">Field '.$i.'</th>';
+		echo '<td><input type="text"  class="std_input" id="ssr_settings_ssr_itema'.$j.'" name="ssr_settings_ssr_item'.$j.'" value="'.esc_attr( get_option('ssr_settings_ssr_item'.$j.'') ).'" />';
+		echo '<input type="checkbox" name="ssr_item'.$i.'" id="ssr_item'.$i.'" class="css-checkbox"'; 
+		if ($i==1){echo 'checked="checked" onclick="return false" ><label for="ssr_item1" class="css-label">Mandatory</label>';}
+		else{
+		{if (esc_attr( get_option('checkedssr_item'.$i.'') )>0) echo 'checked="checked"';}
+		echo '><label for="ssr_item'.$i.'" class="css-label">Required</label>';}
+		echo '</td></tr>';
+		$i++;$j++;
+	}
+	?>	
+		<!--- Other settings -->
 		<tr valign="top">
-        <th scope="row">1st Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item9" name="ssr_settings_ssr_item9" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item9') ); ?>" />
-		<input type="checkbox" name="ssr_item1" id="ssr_item1" class="css-checkbox" checked="checked" onclick="return false" ><label for="ssr_item1" class="css-label">Mandatory</label>
-		
-		</td>
+			<th scope="row"><h1 class="ssr_setting_title">Other Settings</h1></th>
+		</tr>
+		<tr valign="top">
+			<th scope="row">Ability for users <br>(all users in this group can input data and upload image)</th>
+			<td><select id="ssr_settings_ssr_itema34" class="std_input ssr_std_full" >
+			<?php 
+			global $wp_roles;
+			foreach( $wp_roles->roles as $key=>$value ) {
+			echo '<option value="'.$key.'"';
+			if (esc_attr( get_option('ssr_settings_ssr_item34') ) == $key) echo ' selected';
+			echo '>'.$value['name'].'</option>';
+			}
+if ( current_user_can(esc_attr( get_option('ssr_settings_ssr_item34') )) && !current_user_can('upload_files') )
+	add_action('admin_init', 'allow_subscriber_uploads');
+
+	function allow_subscriber_uploads() {
+	$subscriber = get_role(esc_attr( get_option('ssr_settings_ssr_item34') ));
+	$subscriber->add_cap('upload_files');
+}
+if ( current_user_can(esc_attr( get_option('ssr_settings_ssr_item34') )) && !current_user_can('publish_pages') )
+	add_action('admin_init', 'ssr_allow_edit');
+
+	function ssr_allow_edit() {
+	$subscriber = get_role(esc_attr( get_option('ssr_settings_ssr_item34') ));
+	$subscriber->add_cap('publish_pages');
+}
+	
+			?>
+			</td>
         </tr>
-        <tr valign="top">
-        <th scope="row">2nd Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item10" name="ssr_settings_ssr_item10" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item10') ); ?>" />
-		<input type="checkbox" name="ssr_item2" id="ssr_item2" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item2') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item2" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">3rd Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item11" name="ssr_settings_ssr_item11" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item11') ); ?>" />
-		<input type="checkbox" name="ssr_item3" id="ssr_item3" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item3') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item3" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">4th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item12" name="ssr_settings_ssr_item12" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item12') ); ?>" />
-		<input type="checkbox" name="ssr_item4" id="ssr_item4" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item4') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item4" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">5th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item13" name="ssr_settings_ssr_item13" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item13') ); ?>" />
-		<input type="checkbox" name="ssr_item5" id="ssr_item5" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item5') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item5" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">6th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item14" name="ssr_settings_ssr_item14" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item14') ); ?>" />
-		<input type="checkbox" name="ssr_item6" id="ssr_item6" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item6') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item6" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">7th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item15" name="ssr_settings_ssr_item15" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item15') ); ?>" />
-		<input type="checkbox" name="ssr_item7" id="ssr_item7" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item7') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item7" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">8th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item16" name="ssr_settings_ssr_item16" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item16') ); ?>" />
-		<input type="checkbox" name="ssr_item8" id="ssr_item8" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item8') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item8" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">9th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item17" name="ssr_settings_ssr_item17" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item17') ); ?>" />
-		<input type="checkbox" name="ssr_item9" id="ssr_item9" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item9') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item9" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">10th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item18" name="ssr_settings_ssr_item18" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item18') ); ?>" />
-		<input type="checkbox" name="ssr_item10" id="ssr_item10" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item10') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item10" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">11th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item19" name="ssr_settings_ssr_item19" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item19') ); ?>" />
-		<input type="checkbox" name="ssr_item11" id="ssr_item11" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item11') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item11" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">12th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item20" name="ssr_settings_ssr_item20" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item20') ); ?>" />
-		<input type="checkbox" name="ssr_item12" id="ssr_item12" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item12') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item12" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
-        <th scope="row">13th Field</th>
-        <td><input type="text"  class="std_input" id="ssr_settings_ssr_item21" name="ssr_settings_ssr_item21" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item21') ); ?>" />
-		<input type="checkbox" name="ssr_item13" id="ssr_item13" class="css-checkbox" <?php if (esc_attr( get_option('checkedssr_item13') )>0) {echo 'checked="checked"';} ?>><label for="ssr_item13" class="css-label">Required</label>
-		</td>
-        </tr>
-        <tr valign="top">
+		<br>
+	    <tr valign="top">
         <th scope="row"></th>
         <td><button type="button" id="ssr_save_btn">Save</button></td>
         </tr>
