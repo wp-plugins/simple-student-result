@@ -1,7 +1,7 @@
 <?php
 // Function to get the client IP address
 function SSR_get_client_ip() {
-    /*$ipaddress = '';
+    $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
     else if(getenv('HTTP_X_FORWARDED_FOR'))
@@ -16,11 +16,11 @@ function SSR_get_client_ip() {
         $ipaddress = getenv('REMOTE_ADDR');
     else
         $ipaddress = 'UNKNOWN';
-    return $ipaddress;*/
-	$str = file_get_contents("http://ip6.me/");
+    return $ipaddress;
+	/*$str = file_get_contents("http://ip6.me/");
 $pattern = "#\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b#";
 preg_match($pattern, $str, $matches);
-return ($matches[0]);
+return ($matches[0]);*/
 }
 if (SSR_get_client_ip()!='127.0.0.1'){
 set_error_handler(
