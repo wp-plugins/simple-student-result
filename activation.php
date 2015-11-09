@@ -97,9 +97,7 @@ if(empty($row)){
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item17') ))==0) update_option('ssr_settings_ssr_item17','Gender');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item18') ))==0) update_option('ssr_settings_ssr_item18','Address');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item19') ))==0) update_option('ssr_settings_ssr_item19','Mothers Name');
-$i=1;$j=20;
-	while($i <= 23) {
-		if (strlen(esc_attr( get_option('ssr_settings_ssr_item'.$j) ))==0) update_option('ssr_settings_ssr_item'.$j,'Extra Fields '.$i);;
-		$i++;$j++;
-	}
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item20') ))==0) update_option('ssr_settings_ssr_item20','Extra Fields 1');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item21') ))==0) update_option('ssr_settings_ssr_item21','Extra Fields 2');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item22') ))==0) update_option('ssr_settings_ssr_item21','Extra Fields 3');
 ?>
