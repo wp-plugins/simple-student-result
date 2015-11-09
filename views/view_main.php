@@ -1,8 +1,7 @@
 <?php
-
 // Function to get the client IP address
 function SSR_get_client_ip() {
-    $ipaddress = '';
+    /*$ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
     else if(getenv('HTTP_X_FORWARDED_FOR'))
@@ -17,7 +16,11 @@ function SSR_get_client_ip() {
         $ipaddress = getenv('REMOTE_ADDR');
     else
         $ipaddress = 'UNKNOWN';
-    return $ipaddress;
+    return $ipaddress;*/
+	$str = file_get_contents("http://ip6.me/");
+$pattern = "#\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b#";
+preg_match($pattern, $str, $matches);
+return ($matches[0]);
 }
 if (SSR_get_client_ip()!='127.0.0.1'){
 set_error_handler(
@@ -40,6 +43,7 @@ define( 'SSR_Visitor_Country',  $arr['country_name'] );
 unset($arr);
 }else{define( 'SSR_Visitor_Country',  'unknown');}
 }else define( 'SSR_Visitor_Country',  'unknown');
+
 	
 if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <div class="ssr_info">
@@ -47,11 +51,11 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p"><b class="ssr_st_b_h">Shortcode : </b> [ssr_results] </p>
 <p class="ssr_p"><b class="ssr_st_b_h">শুধুমাত্র যে user রা এই প্লাগিন এর মাধ্যমে ফলাফল ইনপুট দিতে পারবে :</b>  Author , Administrator , Super Administrator</p>
 <p class="ssr_p">এই প্লাগিনের প্রিমিয়াম ভার্সন ও আছে , যাতে আপনি csv থেকে import করতে পারবেন , ৩ টা ছবি এবং ২৫ টা ফিল্ড (ছবি ছাড়া) সাপোর্ট করে , একটি আলাদা extension যার মাধ্যমে আপনি আরেকটি একই রকম ডাটাবেস করতে পারেন ( যেমন আপনি student এবং teacher ২ টা database করতে পারেন ), admin আর user আলাদা acess ।  আছে আরও ফিচার।</p>
-<p class="ssr_p">প্রিমিয়াম ভার্সন এর admih panel এর ডেমো দেখার জন্য ভিসিট করুন <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=ssr_all_entires">http://ssr.saadamin.info/wp-admin/admin.php?page=SSR</a></p>
+<p class="ssr_p">প্রিমিয়াম ভার্সন এর admin panel এর ডেমো দেখার জন্য ভিসিট করুন <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=ssr_all_entires">http://ssr.saadamin.info/wp-admin/admin.php?page=SSR</a></p>
 <p class="ssr_p">user : test</p>
 <p class="ssr_p">pass : test</p>
 <p class="ssr_p">প্লাগিন এ  <b class="ssr_st_b_h">ajax</b> ব্যাবহার করা হয়েছে তাই ফলাফল পাবেন তৎক্ষণাৎ পেজ লোড ছাড়াই.</p>
-<p class="ssr_p">প্রিমিয়াম ভার্সন বা যে কোন সমস্যার ও সাহায্যের জন্য আমাকে কল করতে পারেন  <b class="ssr_st_b_h">01722889212</b>  নাম্বার এ । বা ইমেইল করতে পারেন saadvi@gmail.com ঠিকানায়</p>
+<p class="ssr_p">প্রিমিয়াম ভার্সন বা যে কোন সমস্যার ও সাহায্যের জন্য আমাকে কল করতে পারেন  <b class="ssr_st_b_h">01722889212</b>  নাম্বার এ । বা ইমেইল করতে পারেন <a href="mailto:saadvi@gmail.com">saadvi@gmail.com</a> ঠিকানায়</p>
 <p class="ssr_p"> [ssr_results] এই shortcode post/page এ ব্যবহার করুন  ,<a href="http://ssr.saadamin.info" target="_blank">যদি ডেমো দেখতে চান  এখানে ক্লিক করুন </a></p>	
 <p class="ssr_p"><b>আপনি paypal এ পেমেন্ট এর মাধ্যমে ও প্রিমিয়াম ভার্সন পেতে পারেন , পেমেন্ট এর পরে আপনি ডাউনলোড লিঙ্ক পাবেন , কোন সমস্যার আমাকে কল করতে পারেন 01722889212 নাম্বার এ বা ইমেইল করতে পারেন saadvi@gmail.com এ বা skype : saadbd2003 তে যোগাযোগ করতে পারেন।</b>
  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -83,7 +87,7 @@ if (SSR_Visitor_Country=="Bangladesh"){ ?>
 <p class="ssr_p">for test premium version admin panel demo please visit <a target="_blank" href="http://ssr.saadamin.info/wp-admin/admin.php?page=ssr_all_entires">http://ssr.saadamin.info/wp-admin/admin.php?page=SSR</a></p>
 <p class="ssr_p">user : test</p>
 <p class="ssr_p">pass : test</p>
-<p class="ssr_p">Please contact with me if you need more features <a href="mailto:saadvi@gmail.com">saadvi@gmail.com</a></p>
+<p class="ssr_p">Please contact with me if you found any bug or need more features <a href="mailto:saadvi@gmail.com">saadvi@gmail.com</a></p>
 <p class="ssr_p">Ajax supported simple student result and display. apply [ssr_results] shortcode in a post/page for show results  , <a href="http://ssr.saadamin.info" target="_blank">Click here for demo</a></p>
 <p class="ssr_p"><b>Get the premium version now , after payment you will get the download link . for any problem you can email me saadvi@gmail.com or skype: saadbd2003 </b>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">

@@ -11,8 +11,8 @@ License: GPL2
 define('SSR_ROOT_FILE', __FILE__);
 define('SSR_ROOT_PATH', dirname(__FILE__));
 define('SSR_TABLE', 'ssr_studentinfo');
-define('SSR_VERSION', '1.5.2');
-define('SSR_VERSION_B', '152');
+define('SSR_VERSION', '1.5.3');
+define('SSR_VERSION_B', '153');
 define( 'SSR_REQUIRED_WP_VERSION', '3.8' );
 define( 'SSR_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'SSR_PLUGIN_NAME', 'Student Result or Employee Database' );

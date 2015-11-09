@@ -11,7 +11,7 @@
 				"std" => "saad"))
 ?>
 <div class="wrap">
-<div class="set_heading"><h2 class="plugin_heading"><?php echo SSR_PLUGIN_NAME; ?> Settings</h2><h5>ver: <?php echo esc_attr( get_option('SSR_VERSION_P_installed') ) ?></h5></div>
+<div class="set_heading"><h2 class="plugin_heading"><?php echo SSR_PLUGIN_NAME; ?> Settings</h2><h5>ver: <?php echo esc_attr( get_option('ssr_version_installed') ) ?></h5></div>
 
 <form method="post" action="options.php" id="myOptionsForm">
     <?php settings_fields( 'ssr_settings_group' ); ?>
@@ -19,44 +19,44 @@
     <table class="form-tables">
         <tr valign="top">
         <th scope="row">Search Result heading</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema1" name="ssr_settings_ssr_item1" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item1') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item1" name="ssr_settings_ssr_item1" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item1') ); ?>" /></td>
         </tr>
         <th scope="row">Search box Text</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema2" name="ssr_settings_ssr_item2" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item2') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item2" name="ssr_settings_ssr_item2" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item2') ); ?>" /></td>
         </tr>
          
         <tr valign="top">
         <th scope="row">No Result Text</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema3" name="ssr_settings_ssr_item3" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item3') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item3" name="ssr_settings_ssr_item3" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item3') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">Plugin Slug (Example: Student / Employee)</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema4" name="ssr_settings_ssr_item4" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item4') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item4" name="ssr_settings_ssr_item4" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item4') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">Menu Page Name</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema5" name="ssr_settings_ssr_item5" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item5') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item5" name="ssr_settings_ssr_item5" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item5') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">Add Record Page Name</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema6" name="ssr_settings_ssr_item6" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item6') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item6" name="ssr_settings_ssr_item6" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item6') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">1st Custom Post slug (CGPA: CGPA)</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema7" maxlength="500" name="ssr_settings_ssr_item7" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item7') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item7" maxlength="500" name="ssr_settings_ssr_item7" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item7') ); ?>" /></td>
         </tr>
         <tr valign="top">
         <th scope="row">2nd Custom Post slug (Default: Subject)</th>
-        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_itema8" maxlength="500" name="ssr_settings_ssr_item8" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item8') ); ?>" /></td>
+        <td><input type="text"  class="std_input ssr_std_full" id="ssr_settings_ssr_item8" maxlength="500" name="ssr_settings_ssr_item8" value="<?php echo esc_attr( get_option('ssr_settings_ssr_item8') ); ?>" /></td>
         </tr>		
 		<tr valign="top">
         <th scope="row"><h1 class="ssr_setting_title">Field Name on Database</h1></th>
         </tr>
 	<?php
 	$i=1;$j=9;
-	while($i <= 25) {
+	while($i <= 13) {
 		echo '<tr valign="top"><th scope="row">Field '.$i.'</th>';
-		echo '<td><input type="text"  class="std_input" id="ssr_settings_ssr_itema'.$j.'" name="ssr_settings_ssr_item'.$j.'" value="'.esc_attr( get_option('ssr_settings_ssr_item'.$j.'') ).'" />';
+		echo '<td><input type="text"  class="std_input" id="ssr_settings_ssr_item'.$j.'" name="ssr_settings_ssr_item'.$j.'" value="'.esc_attr( get_option('ssr_settings_ssr_item'.$j.'') ).'" />';
 		echo '<input type="checkbox" name="ssr_item'.$i.'" id="ssr_item'.$i.'" class="css-checkbox"'; 
 		if ($i==1){echo 'checked="checked" onclick="return false" ><label for="ssr_item1" class="css-label">Mandatory</label>';}
 		else{
@@ -65,39 +65,7 @@
 		echo '</td></tr>';
 		$i++;$j++;
 	}
-	?>	
-		<!--- Other settings -->
-		<tr valign="top">
-			<th scope="row"><h1 class="ssr_setting_title">Other Settings</h1></th>
-		</tr>
-		<tr valign="top">
-			<th scope="row">Ability for users <br>(all users in this group can input data and upload image)</th>
-			<td><select id="ssr_settings_ssr_itema34" class="std_input ssr_std_full" >
-			<?php 
-			global $wp_roles;
-			foreach( $wp_roles->roles as $key=>$value ) {
-			echo '<option value="'.$key.'"';
-			if (esc_attr( get_option('ssr_settings_ssr_item34') ) == $key) echo ' selected';
-			echo '>'.$value['name'].'</option>';
-			}
-if ( current_user_can(esc_attr( get_option('ssr_settings_ssr_item34') )) && !current_user_can('upload_files') )
-	add_action('admin_init', 'allow_subscriber_uploads');
-
-	function allow_subscriber_uploads() {
-	$subscriber = get_role(esc_attr( get_option('ssr_settings_ssr_item34') ));
-	$subscriber->add_cap('upload_files');
-}
-if ( current_user_can(esc_attr( get_option('ssr_settings_ssr_item34') )) && !current_user_can('publish_pages') )
-	add_action('admin_init', 'ssr_allow_edit');
-
-	function ssr_allow_edit() {
-	$subscriber = get_role(esc_attr( get_option('ssr_settings_ssr_item34') ));
-	$subscriber->add_cap('publish_pages');
-}
-	
-			?>
-			</td>
-        </tr>
+	?>
 		<br>
 	    <tr valign="top">
         <th scope="row"></th>

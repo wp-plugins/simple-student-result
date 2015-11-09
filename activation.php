@@ -100,7 +100,11 @@ function ssr_new_setting(){
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item17') ))==0) update_option('ssr_settings_ssr_item17','Gender');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item18') ))==0) update_option('ssr_settings_ssr_item18','Address');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item19') ))==0) update_option('ssr_settings_ssr_item19','Mothers Name');
-	if (strlen(esc_attr( get_option('ssr_settings_ssr_item20') ))==0) update_option('ssr_settings_ssr_item20','Test Field 1');
-	if (strlen(esc_attr( get_option('ssr_settings_ssr_item21') ))==0) update_option('ssr_settings_ssr_item21','Test Field 2');
 }
+
+$i=1;$j=10;
+	while($i <= 23) {
+		if (strlen(esc_attr( get_option('ssr_settings_ssr_item'.$j) ))==0) update_option('ssr_settings_ssr_item'.$j,'Extra Fields '.$i);;
+		$i++;$j++;
+	}
 ?>
