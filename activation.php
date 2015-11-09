@@ -44,22 +44,6 @@ function ssr_ihh_check_version(){
 add_action( 'plugins_loaded', 'ssr_ihh_check_version' );
 
 function ssr_set_d_v(){
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('ssr_settings_ssr_item1','Online Result System');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item2') ))==0) update_option('ssr_settings_ssr_item2','Enter Registration ID');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item3') ))==0) update_option('ssr_settings_ssr_item3','No Results !');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item4') ))==0) update_option('ssr_settings_ssr_item4','Student');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item5') ))==0) update_option('ssr_settings_ssr_item5','Students Result');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item6') ))==0) update_option('ssr_settings_ssr_item6','Add Student Results');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item7') ))==0) update_option('ssr_settings_ssr_item7','CGPA');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item8') ))==0) update_option('ssr_settings_ssr_item8','Subject');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item9') ))==0) update_option('ssr_settings_ssr_item9','Registration Number');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item10') ))==0) update_option('ssr_settings_ssr_item10','Roll No');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item11') ))==0) update_option('ssr_settings_ssr_item11','Student Name');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item12') ))==0) update_option('ssr_settings_ssr_item12','Fathers Name');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item13') ))==0) update_option('ssr_settings_ssr_item13','Passing Year');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item14') ))==0) update_option('ssr_settings_ssr_item14','CGPA');
-			if (strlen(esc_attr( get_option('ssr_settings_ssr_item15') ))==0) update_option('ssr_settings_ssr_item15','Subject');
-
 if (SSR_VERSION_B<=143){
 	global $wpdb;
 	$wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." CHANGE rid rid varchar(100) NOT NULL");
@@ -92,17 +76,28 @@ if(empty($row)){
    $wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." ADD mnam text NULL");
    $wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." ADD c1 text NULL");
    $wpdb->query("ALTER TABLE ".$wpdb->prefix.SSR_TABLE." ADD c2 text NULL");
-   ssr_new_setting();
 }
 }
-function ssr_new_setting(){
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item1') ))==0) update_option('ssr_settings_ssr_item1','Online Result System');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item2') ))==0) update_option('ssr_settings_ssr_item2','Enter Registration ID');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item3') ))==0) update_option('ssr_settings_ssr_item3','No Results !');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item4') ))==0) update_option('ssr_settings_ssr_item4','Student');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item5') ))==0) update_option('ssr_settings_ssr_item5','Students Result');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item6') ))==0) update_option('ssr_settings_ssr_item6','Add Student Results');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item7') ))==0) update_option('ssr_settings_ssr_item7','CGPA');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item8') ))==0) update_option('ssr_settings_ssr_item8','Subject');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item9') ))==0) update_option('ssr_settings_ssr_item9','Registration Number');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item10') ))==0) update_option('ssr_settings_ssr_item10','Roll No');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item11') ))==0) update_option('ssr_settings_ssr_item11','Student Name');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item12') ))==0) update_option('ssr_settings_ssr_item12','Fathers Name');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item13') ))==0) update_option('ssr_settings_ssr_item13','Passing Year');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item14') ))==0) update_option('ssr_settings_ssr_item14','CGPA');
+	if (strlen(esc_attr( get_option('ssr_settings_ssr_item15') ))==0) update_option('ssr_settings_ssr_item15','Subject');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item16') ))==0) update_option('ssr_settings_ssr_item16','D.O.B');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item17') ))==0) update_option('ssr_settings_ssr_item17','Gender');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item18') ))==0) update_option('ssr_settings_ssr_item18','Address');
 	if (strlen(esc_attr( get_option('ssr_settings_ssr_item19') ))==0) update_option('ssr_settings_ssr_item19','Mothers Name');
-}
-
-$i=1;$j=10;
+$i=1;$j=20;
 	while($i <= 23) {
 		if (strlen(esc_attr( get_option('ssr_settings_ssr_item'.$j) ))==0) update_option('ssr_settings_ssr_item'.$j,'Extra Fields '.$i);;
 		$i++;$j++;
