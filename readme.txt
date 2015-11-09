@@ -2,7 +2,7 @@
 Contributors: saadamin
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X7CDP24CCZYAY
 Plugin URI: http://ssr.saadamin.info
-Tags: student, student result, employee, university, education, result, result system, student, academic, student database, academic result, employee entry, database, ajax, employee management system
+Tags: student result, student, result, result management system,  academic, academic result, university, education, ajax, student result management system, employee, university, education, result, result system, student, academic, employee entry, database, ajax, employee management system
 Requires at least: 3.8
 Tested up to: 4.3.1
 Stable tag: 4.3.1
